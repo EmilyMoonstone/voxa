@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voxa - Immersive Practice</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#8B5CF6",
+                        "secondary": "#14B8A6",
+                        "background": "#0B1020",
+                        "surface": "#12182B",
+                        "on-surface": "#E0E1F6",
+                        "on-surface-variant": "#94A3B8",
+                        "error": "#F87171"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --chart-teal: #14B8A6;
+            --chart-violet: #8B5CF6;
+            --chart-blue: #3B82F6;
+        }
+        .bg-glow-coral { background: radial-gradient(circle at 50% 10%, rgba(248, 113, 113, 0.08) 0%, transparent 60%); }
+        .bg-glow-blue { background: radial-gradient(circle at 50% 90%, rgba(59, 130, 246, 0.08) 0%, transparent 60%); }
+        .bg-glow-green { background: radial-gradient(circle at center, rgba(20, 184, 166, 0.05) 0%, transparent 100%); }
+        .pitch-line-gradient {
+            stroke: url(#pitchGradient);
+            filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.3));
+        }
+        .blur-overlay {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body overflow-hidden">
+<div class="relative flex h-screen w-full flex-col bg-background">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute inset-0 bg-glow-coral"></div>
+<div class="absolute inset-0 bg-glow-blue"></div>
+<div class="absolute inset-0 bg-glow-green"></div>
+<div class="absolute top-1/4 w-full border-t border-white/[0.03] flex items-center px-6">
+<span class="text-[10px] font-bold text-on-surface-variant/20 uppercase tracking-widest py-2">Upper Limit</span>
+</div>
+<div class="absolute bottom-1/4 w-full border-t border-white/[0.03] flex items-center px-6">
+<span class="text-[10px] font-bold text-on-surface-variant/20 uppercase tracking-widest py-2">Lower Limit</span>
+</div>
+<svg class="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 400 800">
+<defs>
+<linearGradient id="pitchGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#F87171"></stop>
+<stop offset="50%" stop-color="#14B8A6"></stop>
+<stop offset="100%" stop-color="#3B82F6"></stop>
+</linearGradient>
+<filter id="glow">
+<feGaussianBlur result="coloredBlur" stdDeviation="3"></feGaussianBlur>
+<feMerge>
+<feMergeNode in="coloredBlur"></feMergeNode>
+<feMergeNode in="SourceGraphic"></feMergeNode>
+</feMerge>
+</filter>
+</defs>
+<path class="pitch-line-gradient" d="M-20 450 Q 50 380, 120 440 T 260 410 T 420 430" fill="none" stroke-linecap="round" stroke-width="6"></path>
+<circle class="animate-pulse" cx="260" cy="410" fill="#14B8A6" filter="url(#glow)" r="8"></circle>
+</svg>
+</div>
+<header class="relative z-10 flex items-center justify-between px-6 pt-12 pb-4">
+<button class="flex items-center justify-center size-10 rounded-full bg-white/5 border border-white/10 text-on-surface backdrop-blur-md">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+</button>
+<div class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full backdrop-blur-md">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Focus Mode</span>
+</div>
+<button class="flex items-center justify-center size-10 rounded-full bg-white/5 border border-white/10 text-on-surface backdrop-blur-md">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</header>
+<div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[120%] z-20 pointer-events-none">
+<div class="flex flex-col items-center">
+<div class="bg-secondary px-8 py-4 rounded-3xl shadow-[0_20px_50px_rgba(20,184,166,0.3)] flex items-baseline gap-2 border border-white/20">
+<span class="font-headline text-5xl font-extrabold text-white tracking-tighter">172</span>
+<span class="font-headline text-xl font-bold text-white/80">Hz</span>
+</div>
+<div class="mt-4 flex items-center gap-2 bg-white/10 backdrop-blur-xl px-3 py-1 rounded-full border border-white/5">
+<div class="size-1.5 rounded-full bg-secondary animate-pulse"></div>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary">Real-time</span>
+</div>
+</div>
+</div>
+<div class="absolute left-6 bottom-32 z-10 flex flex-col gap-3">
+<div class="bg-white/[0.03] border border-white/5 p-4 rounded-2xl backdrop-blur-md w-36">
+<span class="block text-[10px] font-bold text-on-surface-variant/60 uppercase tracking-widest mb-1">Stability</span>
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-headline font-bold text-secondary">82%</span>
+<span class="text-[10px] text-secondary/60 font-bold">+5%</span>
+</div>
+</div>
+<div class="bg-white/[0.03] border border-white/5 p-4 rounded-2xl backdrop-blur-md w-36">
+<span class="block text-[10px] font-bold text-on-surface-variant/60 uppercase tracking-widest mb-1">Session Avg</span>
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-headline font-bold text-on-surface">168</span>
+<span class="text-[10px] text-on-surface-variant font-bold">Hz</span>
+</div>
+</div>
+</div>
+<div class="absolute right-6 bottom-32 z-10 max-w-[180px]">
+<div class="bg-primary/10 border border-primary/20 p-4 rounded-2xl backdrop-blur-md">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-[9px] font-black uppercase tracking-widest text-primary">Insight</span>
+</div>
+<p class="text-xs font-medium text-on-surface leading-snug">Excellent breath control. Maintain this resonance.</p>
+</div>
+</div>
+<footer class="mt-auto relative z-10 p-8 flex justify-center gap-8">
+<button class="flex flex-col items-center gap-2 group">
+<div class="size-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-all group-active:scale-90 group-active:bg-white/10 backdrop-blur-xl">
+<span class="material-symbols-outlined text-on-surface text-3xl" style="font-variation-settings: 'FILL' 1;">pause</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant opacity-60 group-active:opacity-100 transition-opacity">Pause</span>
+</button>
+<button class="flex flex-col items-center gap-2 group">
+<div class="size-16 rounded-full bg-error/10 border border-error/20 flex items-center justify-center transition-all group-active:scale-90 group-active:bg-error/20 backdrop-blur-xl">
+<span class="material-symbols-outlined text-error text-3xl" style="font-variation-settings: 'FILL' 1;">stop</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-widest text-error opacity-60 group-active:opacity-100 transition-opacity">Stop</span>
+</button>
+</footer>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-white/5">
+<div class="h-full bg-primary/40" style="width: 65%;"></div>
+</div>
+</div>
+
+</body></html>

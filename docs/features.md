@@ -82,6 +82,9 @@ Includes:
 
 ## Future Features
 
+### Gamification
+- Streak
+
 ### Resonance Training
 - chest vs head resonance exercises
 - resonance cues and guided practice

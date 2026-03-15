@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voxa Analysis Result</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#b7c4ff",
+              "surface-container": "#1c1f2d",
+              "on-tertiary-container": "#002074",
+              "on-primary-fixed-variant": "#5516be",
+              "secondary-container": "#04b4a2",
+              "on-tertiary-fixed-variant": "#0038b8",
+              "on-primary": "#3c0091",
+              "surface": "#101321",
+              "surface-container-highest": "#313443",
+              "on-secondary-fixed-variant": "#005048",
+              "inverse-surface": "#e0e1f6",
+              "surface-container-low": "#181b29",
+              "primary-fixed-dim": "#d0bcff",
+              "on-primary-fixed": "#23005c",
+              "surface-bright": "#363848",
+              "on-secondary": "#003731",
+              "surface-container-lowest": "#0a0d1b",
+              "surface-variant": "#313443",
+              "on-secondary-container": "#003f38",
+              "on-error": "#690005",
+              "primary-fixed": "#e9ddff",
+              "surface-dim": "#101321",
+              "primary": "#d0bcff",
+              "secondary": "#4fdbc8",
+              "inverse-on-surface": "#2d303f",
+              "on-error-container": "#ffdad6",
+              "tertiary-fixed": "#dde1ff",
+              "tertiary-container": "#6b89ff",
+              "secondary-fixed-dim": "#4fdbc8",
+              "secondary-fixed": "#71f8e4",
+              "on-primary-container": "#340080",
+              "on-tertiary-fixed": "#001453",
+              "on-surface": "#e0e1f6",
+              "primary-container": "#a078ff",
+              "inverse-primary": "#6d3bd7",
+              "on-secondary-fixed": "#00201c",
+              "background": "#101321",
+              "outline-variant": "#494454",
+              "error-container": "#93000a",
+              "outline": "#958ea0",
+              "error": "#ffb4ab",
+              "on-surface-variant": "#cbc3d7",
+              "surface-tint": "#d0bcff",
+              "surface-container-high": "#262938",
+              "on-tertiary": "#002584",
+              "on-background": "#e0e1f6",
+              "tertiary-fixed-dim": "#b7c4ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #101321;
+        color: #e0e1f6;
+        font-family: 'Inter', sans-serif;
+      }
+      .glass-card {
+        background: rgba(49, 52, 67, 0.6);
+        backdrop-filter: blur(12px);
+      }
+      .signature-gradient {
+        background: linear-gradient(135deg, #14B8A6 0%, #5B7CFA 50%, #8B5CF6 100%);
+      }
+      .glow-shadow {
+        box-shadow: 0 0 24px rgba(208, 188, 255, 0.08);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col pb-32">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-surface/80 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface cursor-pointer" data-icon="arrow_back">arrow_back</span>
+<h1 class="font-headline text-xl font-bold text-on-surface">Voxa</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="analytics">analytics</span>
+</div>
+</nav>
+<main class="flex-1 px-6 pt-4 space-y-8 max-w-4xl mx-auto w-full">
+<!-- Hero Header -->
+<header class="space-y-2">
+<h2 class="font-headline text-3xl font-extrabold text-on-surface">Session Analysis</h2>
+<p class="font-body text-on-surface-variant opacity-80">Great consistency today. You're finding your resonance.</p>
+</header>
+<!-- Bento Grid Results -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Avg Pitch -->
+<div class="col-span-1 md:col-span-2 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 signature-gradient blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
+<div>
+<p class="font-label text-secondary tracking-widest uppercase font-semibold text-xs mb-2">Average Pitch</p>
+<div class="flex items-baseline gap-2">
+<span class="font-headline text-6xl font-extrabold text-secondary">214</span>
+<span class="font-headline text-xl text-on-surface-variant">Hz</span>
+</div>
+</div>
+<div class="mt-6 flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+<span class="font-body text-sm">Optimal Resonance Range</span>
+</div>
+</div>
+<!-- Time in Range -->
+<div class="col-span-1 bg-surface-container-highest rounded-xl p-8 flex flex-col items-center justify-center text-center">
+<div class="relative w-24 h-24 mb-4">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="37.6" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-headline text-2xl font-bold">85%</div>
+</div>
+<p class="font-label text-on-surface-variant text-xs uppercase tracking-wider">Target Range</p>
+</div>
+<!-- Min/Max Pitch -->
+<div class="col-span-1 md:col-span-3 bg-surface-container-low rounded-xl p-8 flex flex-wrap gap-12">
+<div class="flex-1 min-w-[140px]">
+<p class="font-label text-on-surface-variant text-xs uppercase tracking-wider mb-2">Minimum Pitch</p>
+<div class="flex items-baseline gap-1">
+<span class="font-headline text-4xl font-bold text-on-surface">182</span>
+<span class="text-sm text-outline">Hz</span>
+</div>
+</div>
+<div class="w-px bg-outline-variant/20 h-16 hidden md:block"></div>
+<div class="flex-1 min-w-[140px]">
+<p class="font-label text-on-surface-variant text-xs uppercase tracking-wider mb-2">Maximum Pitch</p>
+<div class="flex items-baseline gap-1">
+<span class="font-headline text-4xl font-bold text-on-surface">248</span>
+<span class="text-sm text-outline">Hz</span>
+</div>
+</div>
+<div class="flex-1 min-w-[140px] bg-surface-container-highest rounded-lg p-4 flex flex-col justify-center">
+<p class="font-label text-on-surface-variant text-xs uppercase tracking-wider mb-1">Session Duration</p>
+<span class="font-headline text-xl font-bold">04:32</span>
+</div>
+</div>
+</div>
+<!-- Detailed Pitch Chart -->
+<section class="bg-surface-container-lowest rounded-xl p-8 border border-outline-variant/10">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline text-xl font-bold">Pitch Variance</h3>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="text-xs font-label text-on-surface-variant">In Range</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-xs font-label text-on-surface-variant">Variation</span>
+</div>
+</div>
+</div>
+<div class="h-64 w-full relative">
+<!-- Chart Background Grids -->
+<div class="absolute inset-0 flex flex-col justify-between opacity-10 pointer-events-none">
+<div class="border-b border-on-surface w-full"></div>
+<div class="border-b border-on-surface w-full"></div>
+<div class="border-b border-on-surface w-full"></div>
+<div class="border-b border-on-surface w-full"></div>
+</div>
+<!-- Target Range Overlay -->
+<div class="absolute top-[20%] bottom-[40%] left-0 right-0 bg-secondary/5 border-y border-secondary/10"></div>
+<!-- SVG Path Visualization -->
+<svg class="w-full h-full preserve-3d" viewbox="0 0 1000 200">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#4fdbc8"></stop>
+<stop offset="30%" stop-color="#4fdbc8"></stop>
+<stop offset="35%" stop-color="#d0bcff"></stop>
+<stop offset="45%" stop-color="#d0bcff"></stop>
+<stop offset="50%" stop-color="#4fdbc8"></stop>
+<stop offset="100%" stop-color="#4fdbc8"></stop>
+</lineargradient>
+</defs>
+<path d="M0,100 C50,110 80,40 150,60 C220,80 280,140 350,130 C420,120 480,30 550,50 C620,70 680,120 750,110 C820,100 880,90 1000,105" fill="none" stroke="url(#chartGradient)" stroke-linecap="round" stroke-width="4"></path>
+<!-- Dynamic Pulse Node -->
+<circle class="animate-pulse shadow-lg" cx="350" cy="130" fill="#d0bcff" r="6"></circle>
+</svg>
+<!-- Floating Tooltip Example -->
+<div class="absolute left-[35%] top-[65%] glass-card rounded-md p-2 text-[10px] border border-outline-variant/30 flex flex-col shadow-2xl">
+<span class="text-secondary font-bold">210 Hz</span>
+<span class="text-on-surface-variant">01:45</span>
+</div>
+</div>
+</section>
+<!-- Pro Insights Card -->
+<section class="bg-primary-container/10 rounded-xl p-8 border border-primary/20 flex gap-6 items-start">
+<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" data-icon="lightbulb">lightbulb</span>
+</div>
+<div>
+<h4 class="font-headline text-lg font-bold text-primary-fixed-dim mb-2">Pro Insight</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                    You tend to dip slightly in pitch at the end of longer sentences. To maintain your 214Hz average, try focusing on breath support towards the final three words of your phrases.
+                </p>
+</div>
+</section>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-4 mt-8">
+<button class="w-full h-14 rounded-full signature-gradient text-on-primary font-headline font-bold flex items-center justify-center gap-2 glow-shadow">
+<span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+                Playback Session
+            </button>
+<div class="grid grid-cols-2 gap-4">
+<button class="h-14 rounded-full bg-surface-container-high border border-outline-variant/30 text-on-surface font-headline font-semibold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="bookmark">bookmark</span>
+                    Save Session
+                </button>
+<button class="h-14 rounded-full bg-surface-container-high border border-outline-variant/30 text-on-surface font-headline font-semibold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="refresh">refresh</span>
+                    Retake
+                </button>
+</div>
+</div>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-28 right-6 h-14 px-6 rounded-full signature-gradient text-on-primary font-headline font-bold flex items-center gap-3 shadow-2xl z-40">
+<span class="material-symbols-outlined" data-icon="graphic_eq">graphic_eq</span>
+        Live Pitch
+    </button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-surface-container-high/80 backdrop-blur-xl border-t border-outline-variant/10 px-6 py-4 flex justify-between items-center z-50">
+<div class="flex flex-col items-center gap-1 text-secondary">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-label font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="mic">mic</span>
+<span class="text-[10px] font-label font-medium">Practice</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px] font-label font-medium">History</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-label font-medium">Settings</span>
+</div>
+</nav>
+</body></html>

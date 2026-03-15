@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#181b29",
+              "primary": "#d0bcff",
+              "inverse-surface": "#e0e1f6",
+              "on-primary-fixed": "#23005c",
+              "outline-variant": "#494454",
+              "surface-container-highest": "#313443",
+              "secondary-fixed-dim": "#4fdbc8",
+              "primary-fixed-dim": "#d0bcff",
+              "on-background": "#e0e1f6",
+              "on-secondary-fixed-variant": "#005048",
+              "inverse-primary": "#6d3bd7",
+              "surface-container-high": "#262938",
+              "on-secondary-fixed": "#00201c",
+              "surface-container": "#1c1f2d",
+              "outline": "#958ea0",
+              "tertiary": "#b7c4ff",
+              "surface-dim": "#101321",
+              "secondary-fixed": "#71f8e4",
+              "surface-bright": "#363848",
+              "on-secondary-container": "#003f38",
+              "inverse-on-surface": "#2d303f",
+              "on-error": "#690005",
+              "tertiary-fixed": "#dde1ff",
+              "surface": "#101321",
+              "surface-tint": "#d0bcff",
+              "secondary": "#4fdbc8",
+              "on-tertiary-container": "#002074",
+              "on-primary-container": "#340080",
+              "background": "#101321",
+              "tertiary-fixed-dim": "#b7c4ff",
+              "secondary-container": "#04b4a2",
+              "on-tertiary": "#002584",
+              "on-error-container": "#ffdad6",
+              "error-container": "#93000a",
+              "on-surface-variant": "#cbc3d7",
+              "tertiary-container": "#6b89ff",
+              "on-secondary": "#003731",
+              "primary-container": "#a078ff",
+              "surface-container-lowest": "#0a0d1b",
+              "error": "#ffb4ab",
+              "surface-variant": "#313443",
+              "primary-fixed": "#e9ddff",
+              "on-tertiary-fixed-variant": "#0038b8",
+              "on-primary-fixed-variant": "#5516be",
+              "on-primary": "#3c0091",
+              "on-tertiary-fixed": "#001453",
+              "on-surface": "#e0e1f6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #101321; color: #e0e1f6; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-overlay { backdrop-filter: blur(12px); background: rgba(24, 27, 41, 0.7); }
+        .pitch-path { stroke: url(#gradient-stroke); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col overflow-hidden">
+<!-- TopAppBar -->
+<header class="h-16 flex items-center px-4 justify-between bg-surface/50 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface cursor-pointer">arrow_back</span>
+<h1 class="text-xl font-headline font-semibold text-on-surface">Voxa</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">graphic_eq</span>
+</div>
+</header>
+<main class="flex-1 flex flex-col relative px-6 py-4 overflow-y-auto">
+<!-- Paused Content Container (Dimmed) -->
+<div class="opacity-30 pointer-events-none flex flex-col gap-8 flex-1">
+<!-- Real-time Pitch Chart (Frozen State) -->
+<div class="w-full h-48 bg-surface-container-lowest rounded-xl relative overflow-hidden flex items-end">
+<svg class="w-full h-full" viewbox="0 0 400 150">
+<defs>
+<lineargradient id="gradient-stroke" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Range Lines -->
+<line stroke="#494454" stroke-dasharray="4" stroke-width="0.5" x1="0" x2="400" y1="30" y2="30"></line>
+<line stroke="#494454" stroke-dasharray="4" stroke-width="0.5" x1="0" x2="400" y1="75" y2="75"></line>
+<line stroke="#494454" stroke-dasharray="4" stroke-width="0.5" x1="0" x2="400" y1="120" y2="120"></line>
+<!-- Frozen Pitch Path -->
+<path class="pitch-path" d="M0 100 Q 50 80, 100 90 T 200 60 T 300 110 T 400 85" fill="none" stroke-linecap="round" stroke-width="3"></path>
+<!-- Static Puck -->
+<circle class="drop-shadow-[0_0_8px_rgba(20,184,166,0.8)]" cx="400" cy="85" fill="#14B8A6" r="6"></circle>
+</svg>
+<div class="absolute top-2 left-4 text-[10px] uppercase tracking-widest text-outline">Pitch (Hz)</div>
+</div>
+<!-- Bento Stats Grid (Dimmed) -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between h-40">
+<span class="text-label text-outline text-xs uppercase tracking-wider">Avg. Pitch</span>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-headline font-extrabold text-secondary">164</span>
+<span class="text-outline text-sm">Hz</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex flex-col justify-between h-40">
+<span class="text-label text-outline text-xs uppercase tracking-wider">In Range</span>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-headline font-extrabold text-secondary">82</span>
+<span class="text-outline text-sm">%</span>
+</div>
+</div>
+<div class="col-span-2 bg-surface-container-low p-6 rounded-xl flex items-center justify-between">
+<div>
+<span class="text-label text-outline text-xs uppercase tracking-wider block mb-1">Session Duration</span>
+<span class="text-2xl font-headline font-bold text-on-surface">12:45</span>
+</div>
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low bg-primary"></div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low bg-secondary"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pause Overlay (The Sanctuary) -->
+<div class="absolute inset-0 flex flex-col items-center justify-center p-8 z-40">
+<div class="glass-overlay w-full max-w-sm rounded-xl p-8 border border-outline-variant/10 shadow-2xl flex flex-col items-center text-center">
+<div class="w-20 h-20 bg-primary-container/20 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">pause_circle</span>
+</div>
+<h2 class="text-3xl font-headline font-extrabold text-on-surface mb-2">Practice Paused</h2>
+<p class="text-on-surface-variant text-md mb-10 leading-relaxed">
+                    Take a breath. You're making progress.
+                </p>
+<!-- Actions -->
+<div class="flex flex-col w-full gap-4">
+<button class="w-full h-14 rounded-full bg-gradient-to-r from-secondary to-primary text-on-primary-fixed font-headline font-bold text-lg shadow-[0_8px_24px_rgba(20,184,166,0.3)] active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Resume Session
+                    </button>
+<button class="w-full h-14 rounded-full bg-surface-container-highest text-on-surface font-headline font-bold text-lg active:scale-95 transition-transform flex items-center justify-center gap-2 border border-outline-variant/20">
+<span class="material-symbols-outlined">check_circle</span>
+                        Finish Session
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB (Frozen/Disabled) -->
+<div class="fixed bottom-24 right-6 z-10 opacity-20 pointer-events-none">
+<button class="flex items-center gap-3 px-6 h-14 rounded-full bg-primary text-on-primary font-headline font-bold shadow-lg">
+<span class="material-symbols-outlined">graphic_eq</span>
+            Live Pitch
+        </button>
+</div>
+<!-- BottomNavBar (Destination Context) -->
+<nav class="h-20 bg-surface-container-high/80 backdrop-blur-lg border-t border-outline-variant/10 flex items-center justify-around px-2 pb-2 sticky bottom-0">
+<div class="flex flex-col items-center gap-1 opacity-50">
+<span class="material-symbols-outlined text-on-surface-variant">home</span>
+<span class="text-[10px] font-medium text-on-surface-variant">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 relative">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">mic</span>
+<span class="text-[10px] font-medium text-secondary">Practice</span>
+<div class="absolute -bottom-1 w-1 h-1 bg-secondary rounded-full shadow-[0_0_8px_#4fdbc8]"></div>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-50">
+<span class="material-symbols-outlined text-on-surface-variant">history</span>
+<span class="text-[10px] font-medium text-on-surface-variant">History</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-50">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+<span class="text-[10px] font-medium text-on-surface-variant">Settings</span>
+</div>
+</nav>
+<!-- Abstract Gradient Visual Layer for ambiance -->
+<div class="fixed top-0 right-0 w-64 h-64 bg-primary/5 blur-[120px] pointer-events-none rounded-full"></div>
+<div class="fixed bottom-0 left-0 w-80 h-80 bg-secondary/5 blur-[150px] pointer-events-none rounded-full"></div>
+</body></html>

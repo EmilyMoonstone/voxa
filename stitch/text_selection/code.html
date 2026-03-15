@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voxa - Practice Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary": "#b7c4ff",
+                        "surface-container": "#1c1f2d",
+                        "on-tertiary-container": "#002074",
+                        "on-primary-fixed-variant": "#5516be",
+                        "secondary-container": "#04b4a2",
+                        "on-tertiary-fixed-variant": "#0038b8",
+                        "on-primary": "#3c0091",
+                        "surface": "#101321",
+                        "surface-container-highest": "#313443",
+                        "on-secondary-fixed-variant": "#005048",
+                        "inverse-surface": "#e0e1f6",
+                        "surface-container-low": "#181b29",
+                        "primary-fixed-dim": "#d0bcff",
+                        "on-primary-fixed": "#23005c",
+                        "surface-bright": "#363848",
+                        "on-secondary": "#003731",
+                        "surface-container-lowest": "#0a0d1b",
+                        "surface-variant": "#313443",
+                        "on-secondary-container": "#003f38",
+                        "on-error": "#690005",
+                        "primary-fixed": "#e9ddff",
+                        "surface-dim": "#101321",
+                        "primary": "#d0bcff",
+                        "secondary": "#4fdbc8",
+                        "inverse-on-surface": "#2d303f",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#dde1ff",
+                        "tertiary-container": "#6b89ff",
+                        "secondary-fixed-dim": "#4fdbc8",
+                        "secondary-fixed": "#71f8e4",
+                        "on-primary-container": "#340080",
+                        "on-tertiary-fixed": "#001453",
+                        "on-surface": "#e0e1f6",
+                        "primary-container": "#a078ff",
+                        "inverse-primary": "#6d3bd7",
+                        "on-secondary-fixed": "#00201c",
+                        "background": "#101321",
+                        "outline-variant": "#494454",
+                        "error-container": "#93000a",
+                        "outline": "#958ea0",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#cbc3d7",
+                        "surface-tint": "#d0bcff",
+                        "surface-container-high": "#262938",
+                        "on-tertiary": "#002584",
+                        "on-background": "#e0e1f6",
+                        "tertiary-fixed-dim": "#b7c4ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(49, 52, 67, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .signature-gradient-text {
+            background: linear-gradient(to right, #14B8A6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .signature-gradient-bg {
+            background: linear-gradient(135deg, #14B8A6, #8B5CF6);
+        }
+        body {
+            background-color: #101321;
+            color: #e0e1f6;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex items-center justify-between px-6 py-4 bg-surface/80 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<h1 class="font-headline text-xl font-bold tracking-tight text-on-surface">Voxa</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">graphic_eq</span>
+</div>
+</header>
+<main class="px-6 pt-4 max-w-2xl mx-auto space-y-10">
+<!-- Hero Section -->
+<section class="space-y-2">
+<h2 class="font-headline text-3xl font-extrabold tracking-tight">Choose your <span class="signature-gradient-text">Practice Path</span></h2>
+<p class="font-body text-on-surface-variant text-base opacity-80 leading-relaxed">Select a category to begin your resonant training. Each session is designed to help you find your sanctuary voice.</p>
+</section>
+<!-- Free Speech Highlight -->
+<section>
+<div class="group relative overflow-hidden p-8 rounded-xl bg-surface-container-high flex items-center justify-between border-none">
+<div class="absolute inset-0 signature-gradient-bg opacity-10 group-hover:opacity-20 transition-opacity"></div>
+<div class="relative z-10 flex flex-col gap-1">
+<span class="font-label text-xs uppercase tracking-[0.15em] text-secondary font-semibold">Unstructured</span>
+<h3 class="font-headline text-2xl font-bold">Free Speech</h3>
+<p class="font-body text-sm text-on-surface-variant">Real-time feedback as you speak naturally</p>
+</div>
+<div class="relative z-10 w-14 h-14 rounded-full signature-gradient-bg flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-on-primary text-3xl" style="font-variation-settings: 'FILL' 1;">mic</span>
+</div>
+</div>
+</section>
+<!-- Categories -->
+<div class="space-y-12">
+<!-- Category: Everyday Phrases -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h4 class="font-headline text-lg font-bold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                        Everyday Phrases
+                    </h4>
+<span class="font-label text-xs text-outline">12 Texts</span>
+</div>
+<div class="space-y-4">
+<div class="glass-card p-6 rounded-xl flex items-center justify-between hover:bg-surface-container-highest transition-all border-none">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">chat_bubble</span>
+</div>
+<div>
+<h5 class="font-headline font-semibold text-on-surface">Ordering Coffee</h5>
+<p class="font-body text-xs text-on-surface-variant">Quick social interaction</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+<div class="glass-card p-6 rounded-xl flex items-center justify-between hover:bg-surface-container-highest transition-all border-none">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">call</span>
+</div>
+<div>
+<h5 class="font-headline font-semibold text-on-surface">Professional Greeting</h5>
+<p class="font-body text-xs text-on-surface-variant">Formal and welcoming</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Category: Short Phrases -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h4 class="font-headline text-lg font-bold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                        Short Phrases
+                    </h4>
+<span class="font-label text-xs text-outline">8 Texts</span>
+</div>
+<div class="space-y-4">
+<div class="glass-card p-6 rounded-xl flex items-center justify-between hover:bg-surface-container-highest transition-all border-none">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">voice_selection</span>
+</div>
+<div>
+<h5 class="font-headline font-semibold text-on-surface">Vowel Resonators</h5>
+<p class="font-body text-xs text-on-surface-variant">Focused tone drills</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+<div class="glass-card p-6 rounded-xl flex items-center justify-between hover:bg-surface-container-highest transition-all border-none">
+<div class="flex items-center gap-5">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">music_note</span>
+</div>
+<div>
+<h5 class="font-headline font-semibold text-on-surface">Pitch Glide Set</h5>
+<p class="font-body text-xs text-on-surface-variant">Scale exercises</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Category: Longer Reading Passages -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h4 class="font-headline text-lg font-bold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                        Longer Reading Passages
+                    </h4>
+<span class="font-label text-xs text-outline">5 Texts</span>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<div class="glass-card p-6 rounded-xl space-y-4 border-none hover:bg-surface-container-highest transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">auto_stories</span>
+</div>
+<h5 class="font-headline font-semibold text-on-surface">The North Wind and the Sun</h5>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest text-[10px] font-bold uppercase tracking-wider text-outline">Classical</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant line-clamp-2">The North Wind and the Sun were disputing which was the stronger, when a traveler came along wrapped in a warm cloak...</p>
+<div class="flex items-center justify-between pt-2">
+<span class="text-xs text-outline flex items-center gap-1"><span class="material-symbols-outlined text-sm">timer</span> 2:30 min</span>
+<span class="material-symbols-outlined text-secondary">play_circle</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-xl space-y-4 border-none hover:bg-surface-container-highest transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">newspaper</span>
+</div>
+<h5 class="font-headline font-semibold text-on-surface">Evening News Brief</h5>
+</div>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest text-[10px] font-bold uppercase tracking-wider text-outline">Modern</span>
+</div>
+<p class="font-body text-sm text-on-surface-variant line-clamp-2">Today in global headlines, tech innovators gathered at the annual summit to discuss the future of ambient computing and...</p>
+<div class="flex items-center justify-between pt-2">
+<span class="text-xs text-outline flex items-center gap-1"><span class="material-symbols-outlined text-sm">timer</span> 1:45 min</span>
+<span class="material-symbols-outlined text-secondary">play_circle</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- FAB -->
+<div class="fixed bottom-28 right-6 z-40">
+<button class="flex items-center gap-3 h-[56px] px-8 rounded-full signature-gradient-bg text-on-primary shadow-xl shadow-primary/30 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-2xl">graphic_eq</span>
+<span class="font-headline font-bold text-sm tracking-wide">Live Pitch</span>
+</button>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 inset-x-0 z-50 px-6 pb-6">
+<div class="glass-card bg-surface-container-high/80 rounded-full flex items-center justify-around h-20 shadow-2xl">
+<button class="flex flex-col items-center justify-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">home</span>
+<span class="font-label text-[10px] text-on-surface-variant">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 group">
+<div class="relative">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">mic</span>
+<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-secondary"></div>
+</div>
+<span class="font-label text-[10px] text-secondary font-bold">Practice</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">history</span>
+<span class="font-label text-[10px] text-on-surface-variant">History</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">settings</span>
+<span class="font-label text-[10px] text-on-surface-variant">Settings</span>
+</button>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voxa - Auto-Detect Intro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-fixed-variant": "#005048",
+            "on-tertiary-container": "#002074",
+            "surface": "#101321",
+            "background": "#101321",
+            "tertiary": "#b7c4ff",
+            "surface-container-highest": "#313443",
+            "surface-container-high": "#262938",
+            "on-secondary-container": "#003f38",
+            "surface-variant": "#313443",
+            "on-tertiary-fixed-variant": "#0038b8",
+            "on-primary-container": "#340080",
+            "on-error-container": "#ffdad6",
+            "primary-container": "#a078ff",
+            "on-surface-variant": "#cbc3d7",
+            "inverse-surface": "#e0e1f6",
+            "error-container": "#93000a",
+            "secondary-fixed-dim": "#4fdbc8",
+            "on-background": "#e0e1f6",
+            "surface-container-low": "#181b29",
+            "surface-bright": "#363848",
+            "on-tertiary-fixed": "#001453",
+            "secondary": "#4fdbc8",
+            "outline": "#958ea0",
+            "outline-variant": "#494454",
+            "on-secondary-fixed": "#00201c",
+            "on-tertiary": "#002584",
+            "primary": "#d0bcff",
+            "surface-tint": "#d0bcff",
+            "on-error": "#690005",
+            "on-primary-fixed-variant": "#5516be",
+            "inverse-on-surface": "#2d303f",
+            "tertiary-container": "#6b89ff",
+            "tertiary-fixed-dim": "#b7c4ff",
+            "surface-dim": "#101321",
+            "surface-container-lowest": "#0a0d1b",
+            "on-primary": "#3c0091",
+            "primary-fixed": "#e9ddff",
+            "secondary-fixed": "#71f8e4",
+            "inverse-primary": "#6d3bd7",
+            "on-primary-fixed": "#23005c",
+            "error": "#ffb4ab",
+            "on-secondary": "#003731",
+            "tertiary-fixed": "#dde1ff",
+            "surface-container": "#1c1f2d",
+            "primary-fixed-dim": "#d0bcff",
+            "secondary-container": "#04b4a2",
+            "on-surface": "#e0e1f6"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background: rgba(49, 52, 67, 0.6);
+      backdrop-filter: blur(12px);
+    }
+    .signature-gradient {
+      background: linear-gradient(135deg, #14B8A6 0%, #5B7CFA 50%, #8B5CF6 100%);
+    }
+    .glow-soft {
+      box-shadow: 0 0 40px -10px rgba(208, 188, 255, 0.2);
+    }
+    .text-glow-secondary {
+      text-shadow: 0 0 15px rgba(20, 184, 166, 0.4);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 min-h-screen flex flex-col">
+<!-- Top Navigation (Shell Component) -->
+<nav class="sticky top-0 z-50 px-6 py-4 flex items-center justify-between bg-surface/80 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold text-xl text-on-surface">Voxa</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high">
+<img alt="User Profile" data-alt="Minimalist geometric user avatar icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlIgznztduO78ICcsS02y7fWSpsbXtPERWaK0P8tX88PmxdyfL36YYYVBxRFNbkqO3uT__mmaxERYXUFAEKZ_gM0aegmjBKwVtlDn-Pcb2kNMCu8eJ6xU-ncoR6HaNWa1U2VQXiOy9hQqeQk_tq5TZPw5bbd_4YnE3dsP8Nwe3JNMaAKztnL4SHttQNrhAoH5ZsdmOdLBQKld-HFAck55LtL7zqLNSfLi-72Hym4wrqUK3DcqJdU3_0ix0-Uu5Y9_bDW0PwXOn5ek"/>
+</div>
+</nav>
+<!-- Main Creative Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 pb-24 max-w-2xl mx-auto w-full">
+<!-- Hero Visualization Area -->
+<div class="relative w-full aspect-square max-h-[400px] mb-12 flex items-center justify-center">
+<!-- Ambient Glow Circles -->
+<div class="absolute inset-0 signature-gradient opacity-10 blur-[100px] rounded-full"></div>
+<!-- Visualizer Mockup -->
+<div class="relative w-72 h-72 rounded-xl flex items-center justify-center glass-card border border-outline-variant/15 overflow-hidden">
+<div class="absolute inset-0 flex items-center justify-center gap-2 px-8">
+<div class="w-1 h-12 bg-secondary rounded-full opacity-40"></div>
+<div class="w-1 h-24 bg-secondary rounded-full opacity-60"></div>
+<div class="w-1 h-40 signature-gradient rounded-full"></div>
+<div class="w-1 h-32 bg-primary rounded-full opacity-70"></div>
+<div class="w-1 h-16 bg-primary rounded-full opacity-40"></div>
+<div class="w-1 h-28 bg-primary-container rounded-full opacity-50"></div>
+<div class="w-1 h-48 signature-gradient rounded-full"></div>
+<div class="w-1 h-20 bg-secondary rounded-full opacity-60"></div>
+</div>
+<div class="z-10 bg-surface/40 backdrop-blur-md p-6 rounded-lg border border-outline-variant/10 text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+<p class="font-label text-xs tracking-widest uppercase text-on-surface-variant">Calibrating</p>
+</div>
+</div>
+</div>
+<!-- Copy Section -->
+<div class="text-center space-y-6">
+<h2 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface leading-tight">
+        Find Your Natural <span class="text-secondary text-glow-secondary">Resonance</span>
+</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed max-w-md mx-auto">
+        To guide you effectively, Voxa needs to understand your unique vocal baseline. We’ll listen to your natural speech for just a few seconds—no scripts, just you being you.
+      </p>
+</div>
+<!-- Feature Bento Detail -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full mt-12">
+<div class="p-6 rounded-lg bg-surface-container-low border border-outline-variant/10 flex items-start gap-4">
+<div class="bg-secondary/10 p-3 rounded-md">
+<span class="material-symbols-outlined text-secondary">mic_none</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-on-surface">Gentle Capture</h3>
+<p class="font-body text-sm text-on-surface-variant">Simply talk naturally. We analyze pitch, tone, and texture.</p>
+</div>
+</div>
+<div class="p-6 rounded-lg bg-surface-container-low border border-outline-variant/10 flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-md">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-on-surface">Private &amp; Secure</h3>
+<p class="font-body text-sm text-on-surface-variant">Voice data is processed locally. We never store your audio.</p>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="mt-12 w-full flex flex-col items-center gap-4">
+<button class="w-full max-w-sm h-14 signature-gradient rounded-full text-on-primary font-headline font-bold text-lg hover:opacity-90 transition-all shadow-lg glow-soft">
+        Start Listening
+      </button>
+<p class="text-xs text-on-surface-variant/60 font-label uppercase tracking-widest">Takes roughly 10 seconds</p>
+</div>
+</main>
+<!-- Floating Action Button (Shell Component) -->
+<div class="fixed bottom-24 right-6 z-40">
+<button class="flex items-center gap-3 px-6 h-14 signature-gradient rounded-full text-on-primary shadow-xl hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+<span class="font-headline font-bold">Live Pitch</span>
+</button>
+</div>
+<!-- Bottom Navigation (Shell Component) -->
+<footer class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-3rem)] max-w-md">
+<nav class="glass-card border border-outline-variant/15 rounded-full px-4 py-2 flex items-center justify-between shadow-2xl">
+<button class="flex flex-col items-center p-3 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-label font-medium mt-1">Home</span>
+</button>
+<button class="flex flex-col items-center p-3 text-on-surface-variant">
+<span class="material-symbols-outlined">mic</span>
+<span class="text-[10px] font-label font-medium mt-1">Practice</span>
+</button>
+<button class="flex flex-col items-center p-3 text-on-surface-variant">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[10px] font-label font-medium mt-1">History</span>
+</button>
+<button class="flex flex-col items-center p-3 text-on-surface-variant">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-label font-medium mt-1">Settings</span>
+</button>
+</nav>
+</footer>
+</body></html>

@@ -1,0 +1,437 @@
+{
+  "@@locale": "de",
+  "appTitle": "Voxa",
+  "navHome": "Start",
+  "navGoal": "Ziel",
+  "navPractice": "Training",
+  "navRecord": "Aufnahme",
+  "navHistory": "Verlauf",
+  "navSettings": "Einstellungen",
+  "homeEyebrow": "Geschlechtsbejahendes Stimmtraining",
+  "homeTitle": "Ruhiges Training. Klares Feedback. Deine Stimme, dein Ziel.",
+  "homeSubtitle": "Verfolge Training lokal, definiere deine Zieltonhöhe und arbeite mit sanftem Live-Feedback.",
+  "homeReadyTitle": "Bereit für deine nächste Session?",
+  "homeReadySubtitle": "Dein Ziel, der Plan für heute und ein klarer nächster Schritt.",
+  "homePrimaryCta": "Training starten",
+  "homeSecondaryCta": "Ziel festlegen",
+  "homeCurrentTarget": "Aktuelles Ziel",
+  "homeNoTarget": "Noch kein Ziel gespeichert",
+  "homeTargetHintMissing": "Wähle zuerst ein Startziel, bevor du beginnst.",
+  "homeTargetHintSaved": "Du kannst das Ziel jederzeit anpassen, ohne frühere Sessions zu verlieren.",
+  "homeEditTarget": "Ziel bearbeiten",
+  "homeTodayPlan": "Plan für heute",
+  "homePlannedSessionCta": "Heutige Session starten",
+  "homeCustomSessionTitle": "Eigene Session",
+  "homeCustomSessionBody": "Nutze das Live-Setup, um Modus, Fokus und Dauer vor dem Start anzupassen.",
+  "homeCustomSessionCta": "Eigene Session einrichten",
+  "homePlanDuration": "{value} Min Session",
+  "@homePlanDuration": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "homeNoReminderHint": "Noch keine Erinnerung. Füge in den Einstellungen eine hinzu, wenn du einen sanften Anstoß willst.",
+  "homeNextReminder": "Nächste Erinnerung {value}",
+  "@homeNextReminder": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "homeStartNow": "Jetzt starten",
+  "homeRecordSample": "Probe aufnehmen",
+  "homeLastSession": "Letzte Session",
+  "homeNoSessions": "Noch keine Sessions",
+  "homeLatestResult": "Letztes Ergebnis",
+  "homeLatestInRange": "{value}% im Zielbereich",
+  "@homeLatestInRange": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "homeLatestAverageSummary": "{pitch} Durchschnitt · {target}",
+  "@homeLatestAverageSummary": {
+    "placeholders": {
+      "pitch": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "homeViewDetails": "Details ansehen",
+  "onboardingTitle": "Willkommen bei Voxa",
+  "onboardingBody": "Lege eine Starttonhöhe fest und erlaube Mikrofonzugriff, wenn du bereit bist. Du kannst alles später anpassen.",
+  "onboardingWelcomeCardTitle": "Einfach starten",
+  "onboardingWelcomeCardBody": "Voxa nutzt automatisch die Sprache deines Geräts. Sprache und Darstellung kannst du später in den Einstellungen ändern.",
+  "onboardingContinue": "Weiter",
+  "onboardingTargetTitle": "Wähle dein Ziel",
+  "onboardingTargetSubtitle": "Starte mit einer Vorgabe und verfeinere sie später. Voxa hält das bewusst flexibel.",
+  "onboardingMoreOptionsBody": "Nutze ein eigenes Ziel, wenn du deinen Bereich bereits kennst.",
+  "onboardingSkipForNow": "Vorerst überspringen",
+  "goalTitle": "Zielsetzung",
+  "goalSubtitle": "Wähle eine Zieltonhöhe, die Erkundung unterstützt statt Druck zu erzeugen.",
+  "goalHelper": "Pitch ist nur ein Teil der Stimmwahrnehmung. Diese Vorschläge sind Richtwerte, keine Regeln.",
+  "goalEyebrow": "ZIEL",
+  "goalPageTitle": "Ziel-Setup",
+  "goalPageSubtitle": "Halte die Hauptentscheidung erst einfach. Feintuning kannst du später machen, wenn du es brauchst.",
+  "goalChoosePresetTitle": "Wähle eine Vorgabe",
+  "goalMeasureTitle": "Aus deiner Stimme messen",
+  "goalMeasureBody": "Sprich einige Sekunden natürlich und lass Voxa eine Starttonhöhe vorschlagen.",
+  "goalMeasureAction": "Jetzt messen",
+  "goalMoreOptionsTitle": "Weitere Optionen",
+  "goalMoreOptionsBody": "Nutze eine eigene Tonhöhe, kalibriere die Lautstärke oder analysiere eine Audiodatei.",
+  "goalPresetFeminine": "Feminin",
+  "goalPresetAndrogynous": "Androgyn",
+  "goalPresetMasculine": "Maskulin",
+  "goalPresetCustom": "Individuell",
+  "goalMinLabel": "Minimum Hz",
+  "goalMaxLabel": "Maximum Hz",
+  "goalTargetLabel": "Zieltonhöhe",
+  "goalSave": "Ziel speichern",
+  "goalSaved": "Ziel aktualisiert",
+  "goalImportFileAction": "Audiodatei verwenden",
+  "goalImportFileHelp": "Importiere eine Aufnahme wie WAV, M4A, AAC, MP3, FLAC, OGG, OPUS, MP4 oder CAF und lass Voxa aus dem stimmhaften Median eine Zieltonhöhe vorschlagen.",
+  "goalImportFileUnsupported": "Dieses Aufnahmeformat wird noch nicht unterstützt. Versuche WAV, M4A, AAC, MP3, FLAC, OGG, OPUS, MP4 oder CAF.",
+  "goalImportFileError": "Die ausgewählte Audiodatei konnte nicht analysiert werden.",
+  "goalImportFileSuccess": "Vorgeschlagenes Ziel: {value} Hz",
+  "@goalImportFileSuccess": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "goalVolumeTitle": "Ziel-Lautstärke",
+  "goalVolumeNotSet": "Noch nicht kalibriert",
+  "goalVolumeCalibrateAction": "Mit Mikrofon kalibrieren",
+  "goalVolumeHelp": "Sprich laut und klar in deinem üblichen Abstand zum Handy. Das Lautstärke-Feedback funktioniert am besten, wenn der Abstand später ähnlich bleibt.",
+  "goalVolumeCalibratingHint": "Sprich einige Sekunden laut und klar in deinem üblichen Abstand zum Handy.",
+  "goalVolumeCalibrateError": "Die Ziel-Lautstärke konnte nicht erfasst werden.",
+  "goalVolumeCalibrated": "Ziel-Lautstärke auf {value} dBFS gesetzt",
+  "@goalVolumeCalibrated": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "goalValidationMin": "Bitte ein gültiges Minimum eingeben.",
+  "goalValidationMax": "Bitte ein gültiges Maximum eingeben.",
+  "goalValidationOrder": "Das Maximum muss höher als das Minimum sein.",
+  "goalValidationTarget": "Bitte eine gültige Zieltonhöhe eingeben.",
+  "goalValidationBounds": "Wähle ein Ziel zwischen 70 und 350 Hz.",
+  "practiceTitle": "Training",
+  "practiceSubtitle": "Ein klares Signal zur Zeit: deine aktuelle Tonhöhe im Verhältnis zu deiner Zieltonhöhe.",
+  "practicePermissionTitle": "Mikrofonzugriff erforderlich",
+  "practicePermissionBody": "Erlaube den Mikrofonzugriff, um Live-Pitch-Feedback zu nutzen.",
+  "practiceSetTargetFirst": "Lege zuerst dein Ziel fest",
+  "practiceOpenTargetSetup": "Ziel-Setup öffnen",
+  "practiceGrantPermission": "Zugriff erlauben",
+  "practiceOpenSettings": "Einstellungen öffnen",
+  "practiceStart": "Start",
+  "practicePause": "Pause",
+  "practiceResume": "Fortsetzen",
+  "practiceStop": "Stop",
+  "practiceFinish": "Beenden",
+  "practiceSwitchToRecord": "Zur Aufnahme wechseln",
+  "practiceEyebrow": "TRAINING",
+  "practiceLiveFeedbackTitle": "Live-Feedback",
+  "practiceSessionSetupButton": "Session-Setup",
+  "practiceSessionSetupTitle": "Session-Setup",
+  "practiceSessionTypeLive": "Live",
+  "practiceSessionTypeRecord": "Probe aufnehmen",
+  "practiceExerciseFocus": "Trainingsfokus",
+  "practiceSessionLength": "Session-Länge",
+  "practiceVolumeLabel": "Lautstärke",
+  "practiceVolumeAtTarget": "Passt",
+  "practiceVolumeQuiet": "Zu leise",
+  "practiceVolumeLoud": "Zu laut",
+  "practiceVolumeUnclear": "Unklar",
+  "practiceVolumeNotSet": "Ziel setzen",
+  "practiceVolumeDistanceHint": "Halte das Handy in einem ähnlichen Abstand, damit das Lautstärke-Ziel sinnvoll bleibt.",
+  "practiceVolumeSetupHint": "Lege unter Ziel eine Ziel-Lautstärke fest, damit Voxa deine übliche laute und klare Stimme vergleichen kann.",
+  "practicePitchLabel": "Aktuelle Tonhöhe",
+  "practiceTimeInRange": "Im Zielbereich",
+  "practiceVoicedTime": "Stimmhafte Zeit",
+  "practiceTimeAtTarget": "Am Ziel",
+  "practiceTrackedTime": "Ausgewertete Zeit",
+  "practiceStatusLow": "Versuche es etwas höher",
+  "practiceStatusInRange": "Du bist im Zielbereich",
+  "practiceStatusAtTarget": "Du bist am Ziel",
+  "practiceStatusHigh": "Versuche es etwas tiefer",
+  "practiceStatusUnvoiced": "Sprich ruhig und natürlich weiter",
+  "practiceQualityStrong": "Stabil",
+  "practiceQualityWeak": "Schwaches Signal",
+  "practiceQualityUnstable": "Unstabil",
+  "practiceQualitySilent": "Still",
+  "practiceStatInRange": "Im Zielbereich",
+  "practiceStatTimeLeft": "Zeit übrig",
+  "resonanceTitle": "Resonanz",
+  "resonanceStateInsufficient": "Signal unklar",
+  "resonanceStateDark": "Zu dunkel",
+  "resonanceStateBalanced": "Ausgewogen",
+  "resonanceStateBright": "Zu hell",
+  "resonanceStateUnstable": "Unstabil",
+  "resonanceHelperInsufficient": "Nutze erst einen klaren stimmhaften Klang, bevor du Resonanz anpasst.",
+  "resonanceHelperDarkSound": "Lass den Klang etwas weiter nach vorne kommen.",
+  "resonanceHelperBalancedSound": "Die Resonanz wirkt ausgewogen. Bleib bei diesem Klangraum.",
+  "resonanceHelperBrightSound": "Nimm die scharfe Kante etwas heraus und halte den Klang leicht.",
+  "resonanceHelperDarkSpeech": "Lass die Sprache etwas weiter vorne resonieren.",
+  "resonanceHelperBalancedSpeech": "Diese Resonanz wirkt für Sprache stabil und ausgeglichen.",
+  "resonanceHelperBrightSpeech": "Die Sprache klingt etwas hell. Nimm die Kante leicht heraus.",
+  "resonanceHelperUnstable": "Halte den Klang erst ruhig, bevor du etwas veränderst.",
+  "sessionDetailResonance": "Resonanz-Zusammenfassung",
+  "sessionDetailResonanceBalanced": "Ausgewogene Zeit",
+  "practiceTargetLabel": "Ziel",
+  "practiceModeLabel": "Tracking-Modus",
+  "practiceModeSound": "Klang",
+  "practiceModeSpeech": "Sprache",
+  "practiceSoundIdle": "Nutze diesen Modus für gehaltene Klänge wie Summen oder lange Vokale.",
+  "practiceSpeechIdle": "Nutze diesen Modus für gesprochene Sätze. Das Feedback folgt der Sprechbasis statt jeder kleinen Melodiebewegung.",
+  "practiceSoundRunning": "Die Klanganalyse ist aktiv.",
+  "practiceSpeechRunning": "Die Sprach-Basisanalyse ist aktiv.",
+  "practicePaused": "Die Analyse ist pausiert.",
+  "practiceError": "Die Live-Analyse ist derzeit nicht verfügbar.",
+  "practiceReviewReady": "Prüfe deine Session",
+  "practiceReviewTitle": "Session-Rückblick",
+  "practiceChartNow": "jetzt",
+  "practiceChartDrag": "ziehen",
+  "practiceSessionStopped": "Trainingssession beendet",
+  "practiceExerciseGeneralLabel": "Freies Training",
+  "practiceExerciseWarmupResetLabel": "Warm-up Reset",
+  "practiceExerciseLaxVoxLabel": "LaxVox",
+  "practiceExerciseStrawBubblesLabel": "Strohhalmblasen",
+  "practiceExerciseLipTrillsLabel": "Lippentriller",
+  "practiceExerciseResonanceHumLabel": "Resonanz-Summen",
+  "practiceExercisePitchGlidesLabel": "Pitch-Glides",
+  "practiceExerciseTargetSpeechLabel": "Zielsprache",
+  "practiceExerciseReadingTransferLabel": "Lese-Transfer",
+  "practiceExerciseChestResonanceLabel": "Brustresonanz",
+  "practiceExerciseArticulationLabel": "Artikulation",
+  "practiceExerciseGeneralSummary": "Freies Training mit Timer und Live-Feedback.",
+  "practiceExerciseWarmupResetSummary": "Sanfte Lockerung vor gezielterem Stimmtraining.",
+  "practiceExerciseLaxVoxSummary": "SOVT mit Wasserwiderstand für einen leichten, effizienten Stimmeinsatz.",
+  "practiceExerciseStrawBubblesSummary": "Blubbern mit dem Strohhalm für kurze, häufige Resets.",
+  "practiceExerciseLipTrillsSummary": "Lockere Lippentriller mit Luftfluss und leichter Tonbewegung.",
+  "practiceExerciseResonanceHumSummary": "Summen im Vordergesicht für eine leichtere Resonanzplatzierung.",
+  "practiceExercisePitchGlidesSummary": "Langsame Sirenen und Glides, um angenehme Tonhöhe zu finden und zu stabilisieren.",
+  "practiceExerciseTargetSpeechSummary": "Kurze Sätze in deiner Zielstimme.",
+  "practiceExerciseReadingTransferSummary": "Übertrage dein Ziel in verbundene Sprache.",
+  "practiceExerciseChestResonanceSummary": "Verankerung im Körper und Erkundung der Brustresonanz.",
+  "practiceExerciseArticulationSummary": "Klare Konsonanten und Projektion ohne Halsdruck.",
+  "recordTitle": "Aufnehmen und analysieren",
+  "recordSubtitle": "Nimm eine Trainingsprobe auf und speichere eine ruhige, kompakte Zusammenfassung für später.",
+  "recordEyebrow": "AUFNAHME",
+  "recordPageTitle": "Probe aufnehmen",
+  "recordPageSubtitle": "Einrichten, aufnehmen und erst danach speichern.",
+  "recordSelectText": "Übungstext",
+  "recordPracticeTextTitle": "Übungstext",
+  "recordNoText": "Freies Sprechen",
+  "recordLiveFeedback": "Live-Feedback während der Aufnahme anzeigen",
+  "recordStart": "Aufnahme starten",
+  "recordStop": "Aufnahme stoppen",
+  "recordRecordingInProgress": "Aufnahme läuft",
+  "recordSaveFailed": "Die Aufnahme konnte nicht gespeichert werden.",
+  "recordPitchLabel": "Tonhöhe",
+  "recordStatusLabel": "Status",
+  "recordReviewTitle": "Rückblick",
+  "recordPlayRecording": "Aufnahme abspielen",
+  "recordStopPlayback": "Wiedergabe stoppen",
+  "recordAvgLabel": "Durchschnitt",
+  "recordRangeLabel": "Bereich",
+  "recordInRangeLabel": "Im Ziel",
+  "recordAtTargetLabel": "Am Ziel",
+  "recordSoundModeHint": "Im Klangmodus übst du gehaltene Klänge wie Summen, lange Vokale oder resonantes \"mmm\".",
+  "recordSaved": "Session gespeichert",
+  "historyTitle": "Verlauf",
+  "historySubtitle": "Vergangene Sessions sollen informativ und bestärkend wirken, nie korrigierend.",
+  "historyEmptyTitle": "Noch keine Sessions",
+  "historyEmptyBody": "Nimm eine Session auf, um deinen Fortschritt lokal auf diesem Gerät zu verfolgen.",
+  "historyDelete": "Löschen",
+  "historyDeleteConfirmTitle": "Session löschen?",
+  "historyDeleteConfirmBody": "Dadurch werden die Session-Daten und die lokale Aufnahme entfernt.",
+  "historyDeleteConfirmAction": "Session löschen",
+  "historyDeleteCancel": "Abbrechen",
+  "sessionDetailTitle": "Session-Details",
+  "sessionDetailNotFound": "Session nicht gefunden.",
+  "sessionDetailPlayback": "Wiedergabe",
+  "sessionDetailPlaybackStop": "Wiedergabe stoppen",
+  "sessionDetailTarget": "Gespeicherter Zielbereich",
+  "sessionDetailPitchContour": "Pitch-Verlauf",
+  "sessionDetailAtTargetPercent": "{value}% am Ziel",
+  "@sessionDetailAtTargetPercent": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsTitle": "Einstellungen",
+  "settingsSubtitle": "Halte Sprache, Darstellung und Datenumgang einfach und transparent.",
+  "settingsEyebrow": "EINSTELLUNGEN",
+  "settingsOverviewSubtitle": "Halte die Übersicht kurz. Öffne Details nur dann, wenn du sie brauchst.",
+  "settingsLanguage": "Sprache",
+  "settingsAppearance": "Darstellung",
+  "settingsLanguageSubtitle": "Wähle, wie Voxa spricht und aussieht.",
+  "settingsLocaleSystem": "Gerätesprache",
+  "settingsLanguageDeviceHint": "Aktuelle App-Sprache: {value}",
+  "@settingsLanguageDeviceHint": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsThemeSystem": "System",
+  "settingsThemeLight": "Hell",
+  "settingsThemeDark": "Dunkel",
+  "settingsAnalysis": "Analyseoptionen",
+  "settingsAnalysisSubtitle": "Bestimme, wie nachsichtig sich Live- und Aufnahme-Feedback anfühlen sollen.",
+  "settingsSmoothing": "Pitch-Glättung",
+  "settingsTolerance": "Zieltoleranz",
+  "settingsToleranceHelp": "Eine kleine Toleranz sorgt dafür, dass Abweichungen um wenige Hertz noch als passend zählen.",
+  "settingsVolumeTolerance": "Lautstärke-Toleranz",
+  "settingsVolumeToleranceHelp": "Ein breiterer Korridor lässt mehr natürliche Lautstärke-Schwankung zu und hält die Stimme trotzdem klar.",
+  "settingsLiveFeedback": "Live-Feedback während der Aufnahme",
+  "settingsTrainingPlanTitle": "Trainingsplan",
+  "settingsTrainingPlanSubtitle": "Halte Erinnerungen unterstützend und vorhersehbar.",
+  "settingsTrainingPlanSameDaily": "Jeden Tag gleich",
+  "settingsTrainingPlanByWeekday": "Nach Wochentag",
+  "settingsTrainingPlanEveryDay": "Jeden Tag",
+  "settingsSyncTitle": "Google-Sync",
+  "settingsSyncSubtitle": "Halte Zusammenfassungen synchron, ohne Audiodateien vom Gerät zu verschieben.",
+  "settingsSyncBody": "Einstellungen, Ziel und gespeicherte Session-Zusammenfassungen können über den versteckten App-Speicher deines Google-Kontos synchronisiert werden.",
+  "settingsSyncAudioNote": "Audioaufnahmen bleiben lokal auf dem jeweiligen Gerät und werden nicht mit der Cloud synchronisiert.",
+  "settingsSyncUnavailable": "Google-Sync ist auf Android und iOS verfügbar, sobald Google OAuth für diese App eingerichtet ist.",
+  "settingsSyncConnected": "Verbunden",
+  "settingsSyncNotConnected": "Nicht verbunden",
+  "settingsSyncUnavailableDevice": "Auf diesem Gerät nicht verfügbar",
+  "settingsSyncConnectedAs": "Verbunden als",
+  "settingsSyncLastSynced": "Zuletzt synchronisiert",
+  "settingsSyncConnect": "Google-Konto verbinden",
+  "settingsSyncDisconnect": "Verbindung trennen",
+  "settingsSyncNow": "Jetzt synchronisieren",
+  "settingsPrivacy": "Privatsphäre",
+  "settingsPrivacyBody": "Voxa speichert Ziele, Sessions und Aufnahmen im MVP lokal auf diesem Gerät.",
+  "settingsPrivacySubtitle": "Erkläre den Umgang mit Daten klar und halte das Risiko klein.",
+  "settingsResetTitle": "Lokale Daten zurücksetzen",
+  "settingsResetBody": "Lösche alle gespeicherten Ziele, Sessions und Aufnahmen von diesem Gerät.",
+  "settingsDataSubtitle": "Halte destruktive Aktionen getrennt von alltäglichen Einstellungen.",
+  "settingsResetAction": "Daten zurücksetzen",
+  "settingsResetConfirmTitle": "Alle lokalen Daten löschen?",
+  "settingsResetConfirmBody": "Das kann nicht rückgängig gemacht werden.",
+  "settingsResetConfirmAction": "Alles löschen",
+  "settingsResetDone": "Lokale Daten gelöscht",
+  "settingsLocaleEnglish": "Englisch",
+  "settingsLocaleGerman": "Deutsch",
+  "settingsAddReminder": "Erinnerung hinzufügen",
+  "languageLabel": "Sprache",
+  "commonSave": "Speichern",
+  "commonDone": "Fertig",
+  "commonBack": "Zurück",
+  "commonClose": "Schließen",
+  "commonDiscard": "Verwerfen",
+  "commonRepeat": "Wiederholen",
+  "commonMin": "Min",
+  "commonMax": "Max",
+  "commonUnitHz": "Hz",
+  "commonUnitDb": "dB",
+  "commonUnitDbfs": "dBFS",
+  "commonLoading": "Wird geladen...",
+  "commonHz": "{value} Hz",
+  "@commonHz": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "commonRangeHz": "{min}-{max} Hz",
+  "@commonRangeHz": {
+    "placeholders": {
+      "min": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      }
+    }
+  },
+  "commonPercent": "{value}%",
+  "@commonPercent": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "commonSeconds": "{value}s",
+  "@commonSeconds": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "commonToleranceHz": "±{value} Hz",
+  "@commonToleranceHz": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "commonToleranceDb": "±{value} dB",
+  "@commonToleranceDb": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "commonDbfsTolerance": "{value} dBFS ± {tolerance} dB",
+  "@commonDbfsTolerance": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "tolerance": {
+        "type": "String"
+      }
+    }
+  },
+  "commonMillisecondsShort": "{value} ms",
+  "@commonMillisecondsShort": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "commonMinutesShort": "{value} Min",
+  "@commonMinutesShort": {
+    "placeholders": {
+      "value": {
+        "type": "int"
+      }
+    }
+  },
+  "weekdayMonday": "Montag",
+  "weekdayTuesday": "Dienstag",
+  "weekdayWednesday": "Mittwoch",
+  "weekdayThursday": "Donnerstag",
+  "weekdayFriday": "Freitag",
+  "weekdaySaturday": "Samstag",
+  "weekdaySunday": "Sonntag",
+  "practiceTextWarmupTitle": "Warm-up-Absatz",
+  "practiceTextWarmupBody": "Ich atme ruhig ein und spreche heute mit einer stabilen, angenehmen Stimme.",
+  "practiceTextDailyTitle": "Alltags-Check-in",
+  "practiceTextDailyBody": "Meine Stimme darf sich verändern, und ich kann auf eine Weise üben, die sich unterstützend und nachhaltig anfühlt."
+}

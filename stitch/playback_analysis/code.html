@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voxa - Playback</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-lowest": "#0a0d1b",
+                        "surface-tint": "#d0bcff",
+                        "on-tertiary-fixed-variant": "#0038b8",
+                        "outline": "#958ea0",
+                        "on-tertiary-fixed": "#001453",
+                        "surface-container-low": "#181b29",
+                        "on-surface": "#e0e1f6",
+                        "secondary-fixed-dim": "#4fdbc8",
+                        "background": "#101321",
+                        "on-secondary": "#003731",
+                        "surface-container": "#1c1f2d",
+                        "inverse-surface": "#e0e1f6",
+                        "inverse-primary": "#6d3bd7",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#5516be",
+                        "surface-dim": "#101321",
+                        "primary": "#d0bcff",
+                        "on-tertiary": "#002584",
+                        "on-secondary-fixed-variant": "#005048",
+                        "surface-bright": "#363848",
+                        "on-secondary-container": "#003f38",
+                        "tertiary-container": "#6b89ff",
+                        "surface-variant": "#313443",
+                        "on-background": "#e0e1f6",
+                        "tertiary-fixed": "#dde1ff",
+                        "surface-container-high": "#262938",
+                        "on-secondary-fixed": "#00201c",
+                        "primary-container": "#a078ff",
+                        "surface": "#101321",
+                        "secondary-container": "#04b4a2",
+                        "primary-fixed-dim": "#d0bcff",
+                        "on-primary-fixed": "#23005c",
+                        "on-tertiary-container": "#002074",
+                        "on-surface-variant": "#cbc3d7",
+                        "tertiary-fixed-dim": "#b7c4ff",
+                        "tertiary": "#b7c4ff",
+                        "outline-variant": "#494454",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#313443",
+                        "primary-fixed": "#e9ddff",
+                        "on-primary-container": "#340080",
+                        "inverse-on-surface": "#2d303f",
+                        "secondary-fixed": "#71f8e4",
+                        "on-primary": "#3c0091",
+                        "on-error": "#690005",
+                        "secondary": "#4fdbc8",
+                        "on-error-container": "#ffdad6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(49, 52, 67, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #14B8A6 0%, #5B7CFA 50%, #8B5CF6 100%);
+        }
+        .pitch-curve-mask {
+            mask-image: linear-gradient(to right, black 65%, transparent 65%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col">
+<!-- Top Navigation (Shell) -->
+<header class="flex items-center justify-between px-6 py-4 bg-background z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="settings_voice">settings_voice</span>
+<h1 class="font-headline font-bold text-xl tracking-tight text-on-surface">Voxa</h1>
+</div>
+<button class="p-2 rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</button>
+</header>
+<main class="flex-1 px-6 pb-24 max-w-md mx-auto w-full">
+<!-- Hero Pitch Visualization -->
+<section class="mt-4 mb-8">
+<div class="flex items-end justify-between mb-6">
+<div>
+<span class="text-secondary font-label font-medium tracking-widest text-xs uppercase">Live Resonance</span>
+<h2 class="font-headline font-extrabold text-4xl mt-1">164<span class="text-xl font-normal text-on-surface-variant ml-1 tracking-normal">Hz</span></h2>
+</div>
+<div class="text-right">
+<span class="text-on-surface-variant font-label text-xs">Accuracy</span>
+<p class="font-headline font-bold text-xl text-secondary">94%</p>
+</div>
+</div>
+<!-- Interactive Pitch Chart Container -->
+<div class="relative h-64 w-full bg-surface-container-lowest rounded-xl overflow-hidden shadow-inner">
+<!-- Zone Indicators -->
+<div class="absolute inset-0 flex flex-col">
+<div class="flex-1 bg-secondary/10 border-b border-outline-variant/10 flex items-center px-4">
+<span class="text-[10px] text-secondary/50 font-label">OPTIMAL RANGE</span>
+</div>
+<div class="flex-1 bg-transparent border-b border-outline-variant/10"></div>
+<div class="flex-1 bg-transparent border-b border-outline-variant/10"></div>
+</div>
+<!-- The Pitch Waveform (SVG representation) -->
+<svg class="absolute inset-0 h-full w-full" preserveaspectratio="none" viewbox="0 0 400 200">
+<!-- Historical Path (Dull) -->
+<path d="M0,120 Q50,80 100,110 T200,90 T300,130 T400,100" fill="none" stroke="#494454" stroke-dasharray="4 4" stroke-width="2"></path>
+<!-- Active Path (Glow) -->
+<path d="M0,120 Q50,80 100,110 T200,90 T260,110" fill="none" stroke="url(#pitchGradient)" stroke-linecap="round" stroke-width="4"></path>
+<defs>
+<lineargradient id="pitchGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+<!-- Current Tracking Puck -->
+<circle class="shadow-lg shadow-secondary/50" cx="260" cy="110" fill="#14B8A6" r="6"></circle>
+<circle cx="260" cy="110" fill="#14B8A6" fill-opacity="0.2" r="12"></circle>
+</svg>
+</div>
+</section>
+<!-- Playback Controls Bento -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Main Player Card -->
+<div class="col-span-2 glass-panel rounded-xl p-6 flex flex-col gap-6 border border-outline-variant/15">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline font-bold text-lg">Resonance Practice #12</h3>
+<p class="text-on-surface-variant text-sm font-body">Recorded Oct 24 • 0:42</p>
+</div>
+<button class="text-primary">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+<!-- Scrubber -->
+<div class="space-y-2">
+<div class="relative h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full w-[65%] signature-gradient rounded-full"></div>
+</div>
+<div class="flex justify-between text-[10px] font-label text-on-surface-variant tracking-wider">
+<span>0:28</span>
+<span>0:42</span>
+</div>
+</div>
+<!-- Transport Controls -->
+<div class="flex items-center justify-center gap-10">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="replay_10">replay_10</span>
+</button>
+<button class="w-16 h-16 rounded-full signature-gradient flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-105 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="pause" style="font-variation-settings: 'FILL' 1;">pause</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="forward_10">forward_10</span>
+</button>
+</div>
+</div>
+<!-- Affirmation Card -->
+<div class="bg-surface-container-low rounded-xl p-5 border border-outline-variant/10 flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-secondary" data-icon="auto_awesome">auto_awesome</span>
+<div>
+<p class="text-xs text-on-surface-variant font-label mb-1">STABILITY</p>
+<p class="font-headline font-bold text-lg leading-tight">Consistent airflow detected.</p>
+</div>
+</div>
+<!-- Range Card -->
+<div class="bg-surface-container-low rounded-xl p-5 border border-outline-variant/10 flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-primary" data-icon="graphic_eq">graphic_eq</span>
+<div>
+<p class="text-xs text-on-surface-variant font-label mb-1">PITCH RANGE</p>
+<p class="font-headline font-bold text-lg leading-tight">D3 — G3<br/><span class="text-sm font-normal text-on-surface-variant">Alto Focus</span></p>
+</div>
+</div>
+</div>
+<!-- Supportive Insight -->
+<div class="mt-8 flex items-start gap-4 p-4 rounded-xl bg-tertiary-container/10 border border-tertiary-container/20">
+<span class="material-symbols-outlined text-tertiary-container mt-1" data-icon="lightbulb">lightbulb</span>
+<p class="text-sm text-on-tertiary-container/90 leading-relaxed">
+                Your resonance peaked beautifully in the middle phrase. Try to maintain that same "open" feeling during the closing breath.
+            </p>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Shell) -->
+<nav class="fixed bottom-0 left-0 right-0 glass-panel border-t border-outline-variant/10 px-8 py-3 z-50">
+<div class="max-w-md mx-auto flex justify-between items-center">
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="home">home</span>
+<span class="text-[10px] font-label text-on-surface-variant group-hover:text-primary">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 relative">
+<span class="material-symbols-outlined text-secondary" data-icon="exercise" style="font-variation-settings: 'FILL' 1;">exercise</span>
+<span class="text-[10px] font-label text-on-surface">Practice</span>
+<div class="absolute -bottom-1 w-1 h-1 rounded-full bg-secondary"></div>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="history">history</span>
+<span class="text-[10px] font-label text-on-surface-variant group-hover:text-primary">History</span>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="settings">settings</span>
+<span class="text-[10px] font-label text-on-surface-variant group-hover:text-primary">Settings</span>
+</div>
+</div>
+</nav>
+</body></html>

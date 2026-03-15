@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voxa Practice Summary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#181b29",
+                        "primary": "#d0bcff",
+                        "inverse-surface": "#e0e1f6",
+                        "on-primary-fixed": "#23005c",
+                        "outline-variant": "#494454",
+                        "surface-container-highest": "#313443",
+                        "secondary-fixed-dim": "#4fdbc8",
+                        "primary-fixed-dim": "#d0bcff",
+                        "on-background": "#e0e1f6",
+                        "on-secondary-fixed-variant": "#005048",
+                        "inverse-primary": "#6d3bd7",
+                        "surface-container-high": "#262938",
+                        "on-secondary-fixed": "#00201c",
+                        "surface-container": "#1c1f2d",
+                        "outline": "#958ea0",
+                        "tertiary": "#b7c4ff",
+                        "surface-dim": "#101321",
+                        "secondary-fixed": "#71f8e4",
+                        "surface-bright": "#363848",
+                        "on-secondary-container": "#003f38",
+                        "inverse-on-surface": "#2d303f",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#dde1ff",
+                        "surface": "#101321",
+                        "surface-tint": "#d0bcff",
+                        "secondary": "#4fdbc8",
+                        "on-tertiary-container": "#002074",
+                        "on-primary-container": "#340080",
+                        "background": "#101321",
+                        "tertiary-fixed-dim": "#b7c4ff",
+                        "secondary-container": "#04b4a2",
+                        "on-tertiary": "#002584",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#cbc3d7",
+                        "tertiary-container": "#6b89ff",
+                        "on-secondary": "#003731",
+                        "primary-container": "#a078ff",
+                        "surface-container-lowest": "#0a0d1b",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#313443",
+                        "primary-fixed": "#e9ddff",
+                        "on-tertiary-fixed-variant": "#0038b8",
+                        "on-primary-fixed-variant": "#5516be",
+                        "on-primary": "#3c0091",
+                        "on-tertiary-fixed": "#001453",
+                        "on-surface": "#e0e1f6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(49, 52, 67, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #14B8A6 0%, #5B7CFA 50%, #8B5CF6 100%);
+        }
+        .signature-text-gradient {
+            background: linear-gradient(135deg, #4fdbc8 0%, #d0bcff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .chart-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 h-16 flex items-center justify-center bg-surface/80 backdrop-blur-md z-50 px-4">
+<div class="absolute left-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-on-surface" data-icon="arrow_back">arrow_back</span>
+</button>
+</div>
+<h1 class="font-headline font-bold text-lg tracking-tight">Voxa</h1>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-md mx-auto min-h-screen">
+<!-- Hero Affirmation -->
+<section class="mb-10 text-center">
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/10 mb-6">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h2 class="font-headline text-4xl font-extrabold tracking-tight mb-2 signature-text-gradient">
+                Strong session, Alex!
+            </h2>
+<p class="text-on-surface-variant font-medium">You reached your resonance goal early.</p>
+</section>
+<!-- Bento Grid Metrics -->
+<section class="grid grid-cols-2 gap-4 mb-10">
+<!-- Large Focus Metric -->
+<div class="col-span-2 bg-surface-container-low p-8 rounded-xl border-none flex flex-col items-center justify-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<span class="text-secondary font-headline text-6xl font-extrabold mb-1">78%</span>
+<span class="font-label text-xs uppercase tracking-[0.2em] text-outline">In Range</span>
+</div>
+<!-- Smaller Metrics -->
+<div class="bg-surface-container p-6 rounded-xl flex flex-col justify-center">
+<span class="font-headline text-2xl font-bold text-on-surface mb-1">171 Hz</span>
+<span class="font-label text-xs text-on-surface-variant">Average Pitch</span>
+</div>
+<div class="bg-surface-container p-6 rounded-xl flex flex-col justify-center">
+<span class="font-headline text-2xl font-bold text-on-surface mb-1">05:22</span>
+<span class="font-label text-xs text-on-surface-variant">Duration</span>
+</div>
+</section>
+<!-- Session Visualization -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-4 px-2">
+<h3 class="font-headline text-sm font-semibold uppercase tracking-wider text-outline">Pitch Performance</h3>
+<span class="font-label text-xs text-secondary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    Optimal Zone
+                </span>
+</div>
+<div class="bg-surface-container-lowest h-48 rounded-xl relative overflow-hidden p-4">
+<!-- Background Grid Zones -->
+<div class="absolute inset-0 flex flex-col">
+<div class="h-1/3 w-full bg-error/5 border-b border-outline-variant/10"></div>
+<div class="h-1/3 w-full bg-secondary/10 border-b border-outline-variant/10"></div>
+<div class="h-1/3 w-full bg-primary/5"></div>
+</div>
+<!-- Abstract Pitch Path -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 400 200">
+<path class="chart-path" d="M0,150 Q40,140 80,110 T160,80 T240,120 T320,90 T400,100" fill="none" stroke="url(#grad)" stroke-width="3"></path>
+<defs>
+<lineargradient id="grad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#14B8A6;stop-opacity:1"></stop>
+<stop offset="50%" style="stop-color:#5B7CFA;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Current Pointer Mockup -->
+<div class="absolute right-[15%] top-[45%] w-3 h-3 bg-on-surface rounded-full shadow-[0_0_12px_rgba(255,255,255,0.5)] border-2 border-surface"></div>
+</div>
+</section>
+<!-- Action Buttons -->
+<section class="flex flex-col gap-4">
+<button class="signature-gradient h-[56px] w-full rounded-full font-headline font-bold text-on-secondary-fixed flex items-center justify-center gap-2 shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+                Save Session
+            </button>
+<button class="h-[56px] w-full rounded-full font-headline font-semibold text-outline hover:text-on-surface hover:bg-surface-container transition-all flex items-center justify-center">
+                Discard
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-6 right-6 h-20 glass-card rounded-xl flex items-center justify-around px-4 z-50 border border-outline-variant/10">
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-secondary" data-icon="home" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label text-[10px] text-on-surface">Home</span>
+<div class="w-1 h-1 rounded-full bg-secondary mt-1"></div>
+</button>
+<button class="flex flex-col items-center gap-1 text-outline hover:text-on-surface-variant transition-colors group">
+<span class="material-symbols-outlined" data-icon="mic">mic</span>
+<span class="font-label text-[10px]">Practice</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-outline hover:text-on-surface-variant transition-colors group">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label text-[10px]">History</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-outline hover:text-on-surface-variant transition-colors group">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label text-[10px]">Settings</span>
+</button>
+</nav>
+<!-- FAB -->
+<div class="fixed bottom-32 right-6">
+<button class="signature-gradient h-14 px-6 rounded-full flex items-center gap-3 shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-on-secondary-fixed" data-icon="graphic_eq">graphic_eq</span>
+<span class="font-headline font-bold text-sm text-on-secondary-fixed">Live Pitch</span>
+</button>
+</div>
+</body></html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voxa - Language Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#0038b8",
+              "on-surface": "#e0e1f6",
+              "primary-container": "#a078ff",
+              "tertiary": "#b7c4ff",
+              "inverse-surface": "#e0e1f6",
+              "on-secondary-fixed-variant": "#005048",
+              "secondary-fixed": "#71f8e4",
+              "primary-fixed": "#e9ddff",
+              "on-secondary-container": "#003f38",
+              "secondary-container": "#04b4a2",
+              "background": "#101321",
+              "surface-container-high": "#262938",
+              "tertiary-fixed-dim": "#b7c4ff",
+              "on-tertiary-fixed": "#001453",
+              "tertiary-container": "#6b89ff",
+              "primary-fixed-dim": "#d0bcff",
+              "error-container": "#93000a",
+              "surface-variant": "#313443",
+              "inverse-on-surface": "#2d303f",
+              "surface-container": "#1c1f2d",
+              "outline-variant": "#494454",
+              "on-surface-variant": "#cbc3d7",
+              "surface": "#101321",
+              "surface-dim": "#101321",
+              "surface-tint": "#d0bcff",
+              "on-error-container": "#ffdad6",
+              "on-tertiary": "#002584",
+              "surface-container-highest": "#313443",
+              "surface-bright": "#363848",
+              "on-secondary": "#003731",
+              "on-secondary-fixed": "#00201c",
+              "inverse-primary": "#6d3bd7",
+              "on-primary-container": "#340080",
+              "outline": "#958ea0",
+              "on-tertiary-container": "#002074",
+              "tertiary-fixed": "#dde1ff",
+              "on-background": "#e0e1f6",
+              "on-primary-fixed-variant": "#5516be",
+              "on-primary": "#3c0091",
+              "primary": "#d0bcff",
+              "on-primary-fixed": "#23005c",
+              "secondary": "#4fdbc8",
+              "surface-container-lowest": "#0a0d1b",
+              "on-error": "#690005",
+              "surface-container-low": "#181b29",
+              "error": "#ffb4ab",
+              "secondary-fixed-dim": "#4fdbc8"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body {
+        background-color: #101321;
+        color: #e0e1f6;
+        font-family: 'Inter', sans-serif;
+      }
+      .glass-card {
+        background: rgba(49, 52, 67, 0.6);
+        backdrop-filter: blur(12px);
+      }
+      .signature-gradient {
+        background: linear-gradient(135deg, #14B8A6 0%, #8B5CF6 100%);
+      }
+      .glow-shadow:hover {
+        box-shadow: 0 0 24px rgba(208, 188, 255, 0.08);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- Top App Bar (Shared Component) -->
+<header class="h-16 flex items-center px-6 justify-between sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold text-xl tracking-tight">Voxa</h1>
+</div>
+<div class="w-10"></div> <!-- Spacer for center alignment logic -->
+</header>
+<main class="flex-grow flex flex-col px-6 pt-8 pb-24 max-w-md mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-12 text-center">
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight leading-tight mb-2">
+                Choose your language
+            </h2>
+<p class="font-body text-on-surface-variant/80 text-sm">
+                Select your primary language for the coaching session.
+            </p>
+</div>
+<!-- Selection Cards (Bento/Asymmetric Style) -->
+<div class="grid grid-cols-1 gap-4 mb-8">
+<!-- English Card (Active State) -->
+<button class="group relative flex items-center justify-between p-8 rounded-xl bg-surface-container-low border-2 border-secondary glow-shadow transition-all duration-300">
+<div class="flex flex-col items-start text-left">
+<span class="font-label text-xs uppercase tracking-widest text-secondary mb-1 font-bold">Selected</span>
+<span class="font-headline text-2xl font-bold text-on-surface">English</span>
+</div>
+<div class="w-16 h-16 rounded-full flex items-center justify-center bg-surface-container-high overflow-hidden shadow-inner">
+<img alt="UK Flag" class="w-full h-full object-cover scale-150" data-alt="The United Kingdom national flag rounded icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRbpgDrGylRgE7dodb--PkjMRd1U_yZ1EDScDs6sKW9Iv5VOOZJGunS49Uv1iSNvzQITQ0oG4fpsMjwVwD4yNQNk4xfh3ebgry1fWcJcXx5RXlGypTdMHM4LqFZvE0rtcgSS0qnFNLrs7PzM-J4IvWb2qNL0VzM4K3QkQsngnhvfNuPpKTvY16VECH9Rzdv8gKWr_xvXR3YPOh4Fy5Ix5Ke48xJ26I-ncR29sG7rdi8kjIo9TaMY3FSQMoPlJgboCt6nJPjlMdHvE"/>
+</div>
+<!-- Selection Glow Indicator -->
+<div class="absolute inset-0 rounded-xl bg-secondary/5 pointer-events-none"></div>
+</button>
+<!-- Deutsch Card -->
+<button class="group relative flex items-center justify-between p-8 rounded-xl bg-surface-container-low border-2 border-transparent hover:border-outline-variant/30 glow-shadow transition-all duration-300">
+<div class="flex flex-col items-start text-left">
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant/40 mb-1 font-bold">Available</span>
+<span class="font-headline text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">Deutsch</span>
+</div>
+<div class="w-16 h-16 rounded-full flex items-center justify-center bg-surface-container-high overflow-hidden shadow-inner">
+<img alt="German Flag" class="w-full h-full object-cover scale-150" data-alt="The German national flag rounded icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDee8RJTRtxi8SyoAA119sfY-enhC6iCbdMMyiOldisXDnSRtlM7ELnshe7asW8AaX8JlcC-I3cnXVIc-PFPciuf77L7dGXOqlToLr7_HEFLJ1-1qZI2P_KYVyxJhDhAvYf_ZXKl7g3vmR1m6bgh8TlfTv8q0_AqOxPZtSCl9ODNYBAx_TvR97g1c30dTOc0m_qWmZMnxMtgsCvUzcDdGsYoZst8IR01jWxTuuGVWjnTbZD7Io8yMWWoRe9tQhZyahU5r0WcnDY9V0"/>
+</div>
+</button>
+</div>
+<!-- Decorative Element: Atmospheric Depth -->
+<div class="mt-auto relative py-8 flex justify-center">
+<div class="absolute -z-10 w-48 h-48 bg-secondary/10 blur-[64px] rounded-full"></div>
+<div class="flex items-center gap-2 text-on-surface-variant/60">
+<span class="material-symbols-outlined text-sm" data-icon="translate">translate</span>
+<span class="font-label text-[10px] tracking-widest uppercase">More languages coming soon</span>
+</div>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-0 left-0 right-0 p-6 flex justify-center bg-gradient-to-t from-background via-background to-transparent pt-12">
+<button class="w-full max-w-md h-14 rounded-full signature-gradient flex items-center justify-center gap-3 shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-transform">
+<span class="font-headline font-bold text-on-primary-fixed uppercase tracking-wider text-sm">Continue</span>
+<span class="material-symbols-outlined text-on-primary-fixed" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- No BottomNavBar or SideNavBar per "Exclusion Protocol" for Linear Processes -->
+</body></html>

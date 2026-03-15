@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Voxa - Manual Goal Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#005048",
+              "on-tertiary-container": "#002074",
+              "surface": "#101321",
+              "background": "#101321",
+              "tertiary": "#b7c4ff",
+              "surface-container-highest": "#313443",
+              "surface-container-high": "#262938",
+              "on-secondary-container": "#003f38",
+              "surface-variant": "#313443",
+              "on-tertiary-fixed-variant": "#0038b8",
+              "on-primary-container": "#340080",
+              "on-error-container": "#ffdad6",
+              "primary-container": "#a078ff",
+              "on-surface-variant": "#cbc3d7",
+              "inverse-surface": "#e0e1f6",
+              "error-container": "#93000a",
+              "secondary-fixed-dim": "#4fdbc8",
+              "on-background": "#e0e1f6",
+              "surface-container-low": "#181b29",
+              "surface-bright": "#363848",
+              "on-tertiary-fixed": "#001453",
+              "secondary": "#4fdbc8",
+              "outline": "#958ea0",
+              "outline-variant": "#494454",
+              "on-secondary-fixed": "#00201c",
+              "on-tertiary": "#002584",
+              "primary": "#d0bcff",
+              "surface-tint": "#d0bcff",
+              "on-error": "#690005",
+              "on-primary-fixed-variant": "#5516be",
+              "inverse-on-surface": "#2d303f",
+              "tertiary-container": "#6b89ff",
+              "tertiary-fixed-dim": "#b7c4ff",
+              "surface-dim": "#101321",
+              "surface-container-lowest": "#0a0d1b",
+              "on-primary": "#3c0091",
+              "primary-fixed": "#e9ddff",
+              "secondary-fixed": "#71f8e4",
+              "inverse-primary": "#6d3bd7",
+              "on-primary-fixed": "#23005c",
+              "error": "#ffb4ab",
+              "on-secondary": "#003731",
+              "tertiary-fixed": "#dde1ff",
+              "surface-container": "#1c1f2d",
+              "primary-fixed-dim": "#d0bcff",
+              "secondary-container": "#04b4a2",
+              "on-surface": "#e0e1f6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #101321;
+            color: #e0e1f6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(49, 52, 67, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #4fdbc8, #d0bcff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pitch-chart-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(149, 142, 160, 0.1) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        input[type="range"] {
+            -webkit-appearance: none;
+            background: #181b29;
+            height: 8px;
+            border-radius: 999px;
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #4fdbc8;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(79, 219, 200, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col">
+<!-- Top App Bar (Shared Component) -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 h-16 bg-surface/80 backdrop-blur-md">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<h1 class="font-headline text-xl font-bold tracking-tight">Voxa</h1>
+</div>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="flex-1 mt-16 px-6 pb-32 max-w-2xl mx-auto w-full">
+<!-- Hero Section -->
+<section class="py-8">
+<h2 class="font-headline text-4xl font-extrabold mb-2">Goal Setup</h2>
+<p class="font-body text-on-surface-variant text-lg">Define your target resonant range. Technical precision meets your natural voice.</p>
+</section>
+<!-- Visual Preview Chart Motif -->
+<section class="mb-12 relative overflow-hidden rounded-xl bg-surface-container-lowest h-64 border border-outline-variant/15 flex items-center justify-center">
+<div class="absolute inset-0 pitch-chart-bg"></div>
+<!-- Target Range Indicator (Visual Motif) -->
+<div class="relative w-full h-full flex flex-col justify-center items-center px-12">
+<div class="w-full flex justify-between mb-2">
+<span class="font-label text-xs tracking-widest text-outline uppercase">Upper Bound</span>
+<span class="font-label text-xs tracking-widest text-outline uppercase">Lower Bound</span>
+</div>
+<div class="relative w-full h-32 flex items-center">
+<!-- The Range Block -->
+<div class="absolute inset-x-12 h-24 bg-secondary/10 rounded-lg border-y-2 border-dashed border-secondary/30 flex items-center justify-center">
+<span class="font-headline text-secondary font-bold text-sm tracking-widest opacity-60">TARGET RESONANCE</span>
+</div>
+<!-- Waveform SVG -->
+<svg class="w-full h-full relative z-10" preserveaspectratio="none" viewbox="0 0 400 100">
+<path d="M0,50 Q25,30 50,50 T100,50 T150,50 T200,50 T250,50 T300,50 T350,50 T400,50" fill="none" stroke="url(#grad1)" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<lineargradient id="grad1" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#4fdbc8;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#d0bcff;stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Frequency Markers -->
+<div class="absolute top-0 left-12 h-full w-[2px] bg-secondary shadow-[0_0_15px_rgba(79,219,200,0.5)]"></div>
+<div class="absolute top-0 right-12 h-full w-[2px] bg-primary shadow-[0_0_15px_rgba(208,188,255,0.5)]"></div>
+</div>
+<div class="w-full flex justify-between mt-4">
+<div class="flex flex-col items-start">
+<span class="font-headline text-3xl font-extrabold text-secondary">165<span class="text-sm font-normal ml-1">Hz</span></span>
+<span class="font-label text-[10px] text-outline">MINIMUM</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline text-3xl font-extrabold text-primary">255<span class="text-sm font-normal ml-1">Hz</span></span>
+<span class="font-label text-[10px] text-outline">MAXIMUM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Controls Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<!-- Min Hz Control -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col gap-6">
+<div class="flex justify-between items-center">
+<label class="font-headline font-bold text-lg">Minimum Pitch</label>
+<span class="material-symbols-outlined text-secondary">arrow_downward</span>
+</div>
+<div class="flex items-baseline gap-2">
+<input class="bg-transparent border-none p-0 font-headline text-5xl font-extrabold text-on-surface focus:ring-0 w-32" type="number" value="165"/>
+<span class="font-label text-outline text-xl">Hz</span>
+</div>
+<div class="pt-4">
+<input class="w-full" max="300" min="80" type="range" value="165"/>
+</div>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed">
+                    Setting a minimum helps filter out chest resonance and background hum.
+                </p>
+</div>
+<!-- Max Hz Control -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col gap-6">
+<div class="flex justify-between items-center">
+<label class="font-headline font-bold text-lg">Maximum Pitch</label>
+<span class="material-symbols-outlined text-primary">arrow_upward</span>
+</div>
+<div class="flex items-baseline gap-2">
+<input class="bg-transparent border-none p-0 font-headline text-5xl font-extrabold text-on-surface focus:ring-0 w-32" type="number" value="255"/>
+<span class="font-label text-outline text-xl">Hz</span>
+</div>
+<div class="pt-4">
+<input class="w-full" max="500" min="200" style="--tw-ring-color: #d0bcff;" type="range" value="255"/>
+</div>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed">
+                    The upper bound encourages consistent head-voice transition without strain.
+                </p>
+</div>
+</div>
+<!-- Additional Settings Section -->
+<section class="mb-12">
+<h3 class="font-headline text-xl font-bold mb-4 px-2">Refinements</h3>
+<div class="space-y-4">
+<div class="glass-panel p-6 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div>
+<p class="font-headline font-semibold">Adaptive Range</p>
+<p class="font-body text-sm text-on-surface-variant">Adjust goals based on daily fatigue</p>
+</div>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">notifications_active</span>
+</div>
+<div>
+<p class="font-headline font-semibold">Out-of-range Alerts</p>
+<p class="font-body text-sm text-on-surface-variant">Haptic feedback during live pitch</p>
+</div>
+</div>
+<div class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Primary Action -->
+<button class="w-full h-14 bg-gradient-to-r from-secondary to-primary rounded-full text-on-secondary-fixed font-headline font-bold text-lg shadow-lg shadow-secondary/20 hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
+            Save Preferences
+            <span class="material-symbols-outlined">check_circle</span>
+</button>
+</main>
+<!-- Bottom Navigation Bar (Shared Component) -->
+<nav class="fixed bottom-0 left-0 right-0 h-20 bg-surface-container-high/80 backdrop-blur-xl border-t border-outline-variant/10 flex items-center justify-around px-4 z-50">
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">home</span>
+<span class="font-label text-[10px] text-on-surface-variant">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">mic</span>
+<span class="font-label text-[10px] text-on-surface-variant">Practice</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">history</span>
+<span class="font-label text-[10px] text-on-surface-variant">History</span>
+</button>
+<button class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-secondary font-variation-settings-fill">settings</span>
+<span class="font-label text-[10px] text-secondary">Settings</span>
+<div class="absolute bottom-1 w-1 h-1 bg-secondary rounded-full"></div>
+</button>
+</nav>
+<!-- FAB (Shared Component) -->
+<button class="fixed bottom-24 right-6 flex items-center gap-3 bg-surface-container-highest h-14 px-6 rounded-full shadow-2xl border border-outline-variant/20 hover:bg-surface-bright transition-colors group">
+<span class="material-symbols-outlined text-secondary">graphic_eq</span>
+<span class="font-headline font-bold text-on-surface">Live Pitch</span>
+</button>
+</body></html>

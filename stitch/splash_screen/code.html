@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#0038b8",
+              "on-surface": "#e0e1f6",
+              "primary-container": "#a078ff",
+              "tertiary": "#b7c4ff",
+              "inverse-surface": "#e0e1f6",
+              "on-secondary-fixed-variant": "#005048",
+              "secondary-fixed": "#71f8e4",
+              "primary-fixed": "#e9ddff",
+              "on-secondary-container": "#003f38",
+              "secondary-container": "#04b4a2",
+              "background": "#101321",
+              "surface-container-high": "#262938",
+              "tertiary-fixed-dim": "#b7c4ff",
+              "on-tertiary-fixed": "#001453",
+              "tertiary-container": "#6b89ff",
+              "primary-fixed-dim": "#d0bcff",
+              "error-container": "#93000a",
+              "surface-variant": "#313443",
+              "inverse-on-surface": "#2d303f",
+              "surface-container": "#1c1f2d",
+              "outline-variant": "#494454",
+              "on-surface-variant": "#cbc3d7",
+              "surface": "#101321",
+              "surface-dim": "#101321",
+              "surface-tint": "#d0bcff",
+              "on-error-container": "#ffdad6",
+              "on-tertiary": "#002584",
+              "surface-container-highest": "#313443",
+              "surface-bright": "#363848",
+              "on-secondary": "#003731",
+              "on-secondary-fixed": "#00201c",
+              "inverse-primary": "#6d3bd7",
+              "on-primary-container": "#340080",
+              "outline": "#958ea0",
+              "on-tertiary-container": "#002074",
+              "tertiary-fixed": "#dde1ff",
+              "on-background": "#e0e1f6",
+              "on-primary-fixed-variant": "#5516be",
+              "on-primary": "#3c0091",
+              "primary": "#d0bcff",
+              "on-primary-fixed": "#23005c",
+              "secondary": "#4fdbc8",
+              "surface-container-lowest": "#0a0d1b",
+              "on-error": "#690005",
+              "surface-container-low": "#181b29",
+              "error": "#ffb4ab",
+              "secondary-fixed-dim": "#4fdbc8"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .bg-aurora {
+        background: radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, rgba(20, 184, 166, 0.15) 0%, transparent 50%);
+      }
+      .logo-glow {
+        filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.4));
+      }
+      .glass-effect {
+        backdrop-filter: blur(12px);
+        background: rgba(49, 52, 67, 0.6);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body text-on-surface flex flex-col min-h-screen overflow-hidden">
+<!-- Splash Screen Container -->
+<main class="relative flex-1 flex flex-col items-center justify-center bg-aurora p-6">
+<!-- Background Depth Elements -->
+<div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+<div class="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary opacity-5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-secondary opacity-5 rounded-full blur-[120px]"></div>
+</div>
+<!-- Central Logo & Pitch Wave Motif -->
+<div class="relative z-10 flex flex-col items-center space-y-12">
+<!-- Stylized V Logo + Pitch Wave -->
+<div class="relative flex items-center justify-center">
+<!-- Decorative Wave (Left) -->
+<div class="absolute right-full mr-4 flex items-center space-x-1 opacity-20">
+<div class="w-1 h-8 bg-secondary rounded-full"></div>
+<div class="w-1 h-16 bg-secondary rounded-full"></div>
+<div class="w-1 h-12 bg-secondary rounded-full"></div>
+<div class="w-1 h-6 bg-secondary rounded-full"></div>
+</div>
+<!-- Main Logo Container -->
+<div class="w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-secondary via-primary-container to-primary rounded-xl flex items-center justify-center logo-glow">
+<!-- Stylized V -->
+<svg class="w-20 h-20 text-background fill-current" viewbox="0 0 100 100">
+<path d="M15 20L45 85L55 85L85 20H72L50 70L28 20H15Z"></path>
+</svg>
+</div>
+<!-- Decorative Wave (Right) -->
+<div class="absolute left-full ml-4 flex items-center space-x-1 opacity-20">
+<div class="w-1 h-6 bg-primary rounded-full"></div>
+<div class="w-1 h-14 bg-primary rounded-full"></div>
+<div class="w-1 h-20 bg-primary rounded-full"></div>
+<div class="w-1 h-10 bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- Pitch Wave Motif Trace -->
+<div class="w-64 h-24 relative">
+<svg fill="none" height="96" viewbox="0 0 256 96" width="256" xmlns="http://www.w3.org/2000/svg">
+<!-- Faded Grid Lines (Editorial Technical Style) -->
+<line stroke="currentColor" stroke-opacity="0.05" x1="0" x2="256" y1="24" y2="24"></line>
+<line stroke="currentColor" stroke-opacity="0.05" x1="0" x2="256" y1="48" y2="48"></line>
+<line stroke="currentColor" stroke-opacity="0.05" x1="0" x2="256" y1="72" y2="72"></line>
+<!-- Resonant Pitch Path -->
+<path d="M0 60C20 60 40 20 60 20C80 20 100 80 120 80C140 80 160 40 180 40C200 40 220 50 256 50" stroke="url(#paint0_linear)" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<!-- Floating Tracker Puck -->
+<circle cx="180" cy="40" fill="#14B8A6" r="4"></circle>
+<circle cx="180" cy="40" r="10" stroke="#14B8A6" stroke-opacity="0.2" stroke-width="2"></circle>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="paint0_linear" x1="0" x2="256" y1="50" y2="50">
+<stop stop-color="#14B8A6"></stop>
+<stop offset="0.5" stop-color="#8B5CF6"></stop>
+<stop offset="1" stop-color="#14B8A6" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</div>
+<!-- Minimalist Loading Indicator -->
+<div class="absolute bottom-16 flex flex-col items-center space-y-4">
+<div class="flex space-x-2">
+<div class="w-2 h-2 rounded-full bg-secondary opacity-40"></div>
+<div class="w-2 h-2 rounded-full bg-secondary opacity-70"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+</div>
+</main>
+<!-- Content Hidden for Splash State (Maintained for Hierarchy) -->
+<div class="hidden">
+<!-- Brand Anchors rendered as requested by protocol but hidden for focus -->
+<header class="w-full flex justify-center p-4">
+<h1 class="font-headline text-headline-md">Voxa</h1>
+</header>
+<nav class="fixed bottom-0 w-full flex justify-around p-4 glass-effect">
+<span class="material-symbols-outlined">home</span>
+<span class="material-symbols-outlined">mic</span>
+<span class="material-symbols-outlined">history</span>
+<span class="material-symbols-outlined">settings</span>
+</nav>
+<button class="fixed bottom-24 right-6 bg-gradient-to-r from-secondary to-primary p-4 rounded-full shadow-lg flex items-center space-x-2">
+<span class="material-symbols-outlined">graphic_eq</span>
+<span class="font-label">Live Pitch</span>
+</button>
+</div>
+</body></html>

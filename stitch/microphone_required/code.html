@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#958ea0",
+              "on-tertiary-fixed-variant": "#0038b8",
+              "on-tertiary-fixed": "#001453",
+              "surface-container-low": "#181b29",
+              "surface-container-lowest": "#0a0d1b",
+              "surface-tint": "#d0bcff",
+              "on-secondary": "#003731",
+              "on-primary-fixed-variant": "#5516be",
+              "surface-container": "#1c1f2d",
+              "inverse-surface": "#e0e1f6",
+              "inverse-primary": "#6d3bd7",
+              "error-container": "#93000a",
+              "surface-dim": "#101321",
+              "primary": "#d0bcff",
+              "on-tertiary": "#002584",
+              "on-secondary-fixed-variant": "#005048",
+              "on-surface": "#e0e1f6",
+              "secondary-fixed-dim": "#4fdbc8",
+              "background": "#101321",
+              "surface-variant": "#313443",
+              "on-background": "#e0e1f6",
+              "tertiary-fixed": "#dde1ff",
+              "on-secondary-fixed": "#00201c",
+              "surface-container-high": "#262938",
+              "primary-container": "#a078ff",
+              "surface-bright": "#363848",
+              "on-secondary-container": "#003f38",
+              "tertiary-container": "#6b89ff",
+              "tertiary": "#b7c4ff",
+              "outline-variant": "#494454",
+              "error": "#ffb4ab",
+              "primary-fixed": "#e9ddff",
+              "on-primary-container": "#340080",
+              "inverse-on-surface": "#2d303f",
+              "surface-container-highest": "#313443",
+              "secondary": "#4fdbc8",
+              "secondary-fixed": "#71f8e4",
+              "on-primary": "#3c0091",
+              "on-error": "#690005",
+              "on-error-container": "#ffdad6",
+              "on-primary-fixed": "#23005c",
+              "surface": "#101321",
+              "secondary-container": "#04b4a2",
+              "primary-fixed-dim": "#d0bcff",
+              "on-tertiary-container": "#002074",
+              "tertiary-fixed-dim": "#b7c4ff",
+              "on-surface-variant": "#cbc3d7"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #101321;
+            color: #e0e1f6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(49, 52, 67, 0.6);
+            backdrop-filter: blur(12px);
+        }
+        .signature-gradient-text {
+            background: linear-gradient(to right, #14B8A6, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .signature-gradient-bg {
+            background: linear-gradient(135deg, #14B8A6, #8B5CF6);
+        }
+        .wave-container {
+            position: relative;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+        .wave-bar {
+            width: 4px;
+            background: #313443;
+            border-radius: 99px;
+            height: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col items-center">
+<!-- TopAppBar -->
+<nav class="w-full max-w-md flex items-center justify-between px-6 py-4 sticky top-0 z-50 bg-background/80 backdrop-blur-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="graphic_eq">graphic_eq</span>
+<span class="font-headline font-bold text-lg tracking-tight">Voxa</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-1 w-full max-w-md px-6 flex flex-col items-center justify-center relative">
+<!-- Abstract Illustration Section -->
+<div class="w-full mb-12 flex flex-col items-center">
+<div class="relative w-48 h-48 flex items-center justify-center">
+<!-- Outer Glows -->
+<div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl"></div>
+<!-- Central Muted Visual -->
+<div class="relative z-10 w-32 h-32 rounded-xl flex items-center justify-center bg-surface-container-low border border-outline-variant/15 overflow-hidden">
+<div class="wave-container">
+<div class="wave-bar h-8"></div>
+<div class="wave-bar h-12"></div>
+<div class="wave-bar h-20 opacity-20"></div>
+<div class="wave-bar h-12"></div>
+<div class="wave-bar h-8"></div>
+</div>
+<!-- Muted Icon Overlay -->
+<div class="absolute inset-0 flex items-center justify-center bg-surface-dim/40 backdrop-blur-[2px]">
+<div class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center shadow-xl">
+<span class="material-symbols-outlined text-error text-4xl" data-icon="mic_off">mic_off</span>
+</div>
+</div>
+</div>
+<!-- Dynamic Elements -->
+<div class="absolute -top-4 -right-2 w-12 h-12 rounded-full glass-card border border-outline-variant/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="lock">lock</span>
+</div>
+</div>
+</div>
+<!-- Content Section -->
+<div class="text-center space-y-6">
+<h1 class="font-headline text-3xl font-extrabold tracking-tight leading-tight">
+                Your voice is <span class="signature-gradient-text">essential</span>
+</h1>
+<div class="bg-surface-container-low rounded-xl p-8 border border-outline-variant/15">
+<p class="font-body text-on-surface-variant text-base leading-relaxed">
+                    Microphone access is needed to hear your voice and provide realtime feedback.
+                </p>
+</div>
+<!-- Bento-style Feature Briefs -->
+<div class="grid grid-cols-2 gap-3 w-full">
+<div class="bg-surface-container-lowest p-4 rounded-md border border-outline-variant/10 flex flex-col items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="analytics">analytics</span>
+<span class="font-label text-xs uppercase tracking-wider text-outline">Real-time Stats</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-md border border-outline-variant/10 flex flex-col items-start gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="psychology">psychology</span>
+<span class="font-label text-xs uppercase tracking-wider text-outline">Smart Analysis</span>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="w-full mt-10 mb-20">
+<button class="w-full h-14 signature-gradient-bg rounded-full font-headline font-bold text-on-primary shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
+<span>Open System Settings</span>
+<span class="material-symbols-outlined text-xl" data-icon="settings">settings</span>
+</button>
+<p class="text-center mt-4 font-label text-xs text-outline tracking-wide">
+                You can change this anytime in your phone settings
+            </p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm glass-card rounded-full px-6 py-3 border border-outline-variant/15 flex items-center justify-between shadow-2xl z-50">
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="home">home</span>
+<span class="font-label text-[10px] text-on-surface-variant">Home</span>
+</div>
+<div class="relative flex flex-col items-center gap-1">
+<div class="absolute -top-1 w-1 h-1 bg-secondary rounded-full blur-[2px]"></div>
+<span class="material-symbols-outlined text-secondary" data-icon="mic" data-weight="fill">mic</span>
+<span class="font-label text-[10px] text-secondary">Practice</span>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="history">history</span>
+<span class="font-label text-[10px] text-on-surface-variant">History</span>
+</div>
+<div class="flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors" data-icon="settings">settings</span>
+<span class="font-label text-[10px] text-on-surface-variant">Settings</span>
+</div>
+</div>
+</body></html>

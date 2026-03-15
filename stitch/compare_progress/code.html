@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#0a0d1b",
+            "surface-tint": "#d0bcff",
+            "on-tertiary-fixed-variant": "#0038b8",
+            "outline": "#958ea0",
+            "on-tertiary-fixed": "#001453",
+            "surface-container-low": "#181b29",
+            "on-surface": "#e0e1f6",
+            "secondary-fixed-dim": "#4fdbc8",
+            "background": "#101321",
+            "on-secondary": "#003731",
+            "surface-container": "#1c1f2d",
+            "inverse-surface": "#e0e1f6",
+            "inverse-primary": "#6d3bd7",
+            "error-container": "#93000a",
+            "on-primary-fixed-variant": "#5516be",
+            "surface-dim": "#101321",
+            "primary": "#d0bcff",
+            "on-tertiary": "#002584",
+            "on-secondary-fixed-variant": "#005048",
+            "surface-bright": "#363848",
+            "on-secondary-container": "#003f38",
+            "tertiary-container": "#6b89ff",
+            "surface-variant": "#313443",
+            "on-background": "#e0e1f6",
+            "tertiary-fixed": "#dde1ff",
+            "surface-container-high": "#262938",
+            "on-secondary-fixed": "#00201c",
+            "primary-container": "#a078ff",
+            "surface": "#101321",
+            "secondary-container": "#04b4a2",
+            "primary-fixed-dim": "#d0bcff",
+            "on-primary-fixed": "#23005c",
+            "on-tertiary-container": "#002074",
+            "on-surface-variant": "#cbc3d7",
+            "tertiary-fixed-dim": "#b7c4ff",
+            "tertiary": "#b7c4ff",
+            "outline-variant": "#494454",
+            "error": "#ffb4ab",
+            "surface-container-highest": "#313443",
+            "primary-fixed": "#e9ddff",
+            "on-primary-container": "#340080",
+            "inverse-on-surface": "#2d303f",
+            "secondary-fixed": "#71f8e4",
+            "on-primary": "#3c0091",
+            "on-error": "#690005",
+            "secondary": "#4fdbc8",
+            "on-error-container": "#ffdad6"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(49, 52, 67, 0.6);
+      backdrop-filter: blur(12px);
+    }
+    .pitch-chart-bg {
+      background: linear-gradient(180deg, rgba(79, 140, 255, 0.05) 0%, rgba(34, 197, 94, 0.08) 40%, rgba(34, 197, 94, 0.08) 60%, rgba(242, 107, 107, 0.05) 100%);
+    }
+    .signature-gradient-text {
+      background: linear-gradient(to right, #14B8A6, #8B5CF6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="h-16 flex items-center justify-between px-6 sticky top-0 z-50 bg-background/80 backdrop-blur-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="settings_voice">settings_voice</span>
+<h1 class="font-headline text-xl font-bold tracking-tight">Voxa</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="flex-1 px-6 pt-4 pb-32 max-w-md mx-auto w-full space-y-8">
+<!-- Comparison Header -->
+<section>
+<div class="flex items-center justify-between mb-2">
+<h2 class="font-headline text-2xl font-bold">Compare Sessions</h2>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="swap_horiz">swap_horiz</span>
+</div>
+<p class="text-on-surface-variant text-sm">Visualizing your resonance progress between Oct 12 and Oct 19.</p>
+</section>
+<!-- Session Chips -->
+<div class="flex gap-3">
+<div class="flex-1 bg-surface-container-high rounded-full py-2 px-4 flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<span class="text-xs font-medium">Oct 19 (Latest)</span>
+</div>
+<div class="flex-1 bg-surface-container-high rounded-full py-2 px-4 flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-xs font-medium">Oct 12 (Previous)</span>
+</div>
+</div>
+<!-- Main Comparison Chart -->
+<section class="relative">
+<div class="bg-surface-container-lowest rounded-xl h-64 w-full relative overflow-hidden pitch-chart-bg p-4 flex flex-col justify-between">
+<!-- Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between py-8 opacity-10">
+<div class="border-t border-outline"></div>
+<div class="border-t border-outline"></div>
+<div class="border-t border-outline"></div>
+<div class="border-t border-outline"></div>
+</div>
+<!-- Chart Labels -->
+<div class="flex flex-col justify-between h-full relative z-10 text-[10px] text-on-surface-variant font-label tracking-widest">
+<span>HIGH</span>
+<span>TARGET</span>
+<span>LOW</span>
+</div>
+<!-- SVG Chart Path (Abstract Representation) -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none">
+<!-- Session 1 Path (Primary - Violet) -->
+<path d="M0,160 Q80,100 160,130 T320,80 T480,110" fill="none" stroke="#d0bcff" stroke-linecap="round" stroke-width="3"></path>
+<!-- Session 2 Path (Secondary - Teal) -->
+<path d="M0,180 Q80,150 160,170 T320,140 T480,160" fill="none" stroke="#4fdbc8" stroke-dasharray="8 4" stroke-linecap="round" stroke-width="3"></path>
+<!-- Current Intersection Point -->
+<circle cx="280" cy="95" fill="#d0bcff" r="5"></circle>
+<circle cx="280" cy="95" fill="#d0bcff" fill-opacity="0.2" r="12"></circle>
+</svg>
+</div>
+<!-- Tooltip Overlap -->
+<div class="absolute top-8 left-1/2 -translate-x-1/2 glass-card px-4 py-2 rounded-full border border-outline-variant/15 flex items-center gap-2">
+<span class="text-[10px] font-bold text-primary">RESONANCE PEAK</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-tighter">195.4 Hz</span>
+</div>
+</section>
+<!-- Side-by-Side Statistics -->
+<section class="grid grid-cols-2 gap-4">
+<!-- Avg. Pitch Card -->
+<div class="bg-surface-container-low rounded-xl p-6 flex flex-col space-y-6 col-span-2">
+<div class="flex items-center justify-between">
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Average Pitch</span>
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="trending_up">trending_up</span>
+</div>
+<div class="flex items-end justify-between">
+<div class="space-y-1">
+<span class="font-headline text-4xl font-extrabold text-primary">188</span>
+<span class="text-xs text-on-surface-variant">Hz</span>
+<p class="text-[10px] text-primary/70 font-label">OCT 19</p>
+</div>
+<div class="w-[1px] h-12 bg-outline-variant/20"></div>
+<div class="space-y-1 text-right">
+<span class="font-headline text-4xl font-extrabold text-secondary">164</span>
+<span class="text-xs text-on-surface-variant">Hz</span>
+<p class="text-[10px] text-secondary/70 font-label">OCT 12</p>
+</div>
+</div>
+</div>
+<!-- Stability Card -->
+<div class="bg-surface-container-low rounded-xl p-5 flex flex-col space-y-4">
+<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest">Stability</span>
+<div>
+<span class="font-headline text-2xl font-bold text-on-surface">92%</span>
+<div class="w-full bg-surface-variant h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full w-[92%]"></div>
+</div>
+<p class="text-[10px] mt-2 text-primary">+4% vs last</p>
+</div>
+</div>
+<!-- Range Adherence Card -->
+<div class="bg-surface-container-low rounded-xl p-5 flex flex-col space-y-4">
+<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest">In Range</span>
+<div>
+<span class="font-headline text-2xl font-bold text-on-surface">78%</span>
+<div class="w-full bg-surface-variant h-1 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full w-[78%]"></div>
+</div>
+<p class="text-[10px] mt-2 text-secondary">+12% vs last</p>
+</div>
+</div>
+</section>
+<!-- Qualitative Insight -->
+<section class="bg-surface-container-highest/30 border border-outline-variant/10 rounded-xl p-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="space-y-2">
+<h4 class="font-headline text-sm font-bold">Insight for Oct 19</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Your voice is showing significantly more <span class="text-secondary font-medium">tonal consistency</span> in the 180-200Hz range compared to last week. Great progress!</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm glass-card rounded-full h-16 flex items-center justify-around px-4 shadow-2xl border border-outline-variant/10">
+<button class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] mt-0.5">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center w-12 h-12 text-secondary relative">
+<span class="material-symbols-outlined" data-icon="exercise">exercise</span>
+<span class="text-[10px] mt-0.5">Practice</span>
+<div class="absolute -bottom-1 w-1 h-1 bg-secondary rounded-full shadow-[0_0_8px_#14B8A6]"></div>
+</button>
+<button class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="text-[10px] mt-0.5">History</span>
+</button>
+<button class="flex flex-col items-center justify-center w-12 h-12 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] mt-0.5">Settings</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline": "#958ea0",
+              "on-tertiary-fixed-variant": "#0038b8",
+              "on-tertiary-fixed": "#001453",
+              "surface-container-low": "#181b29",
+              "surface-container-lowest": "#0a0d1b",
+              "surface-tint": "#d0bcff",
+              "on-secondary": "#003731",
+              "on-primary-fixed-variant": "#5516be",
+              "surface-container": "#1c1f2d",
+              "inverse-surface": "#e0e1f6",
+              "inverse-primary": "#6d3bd7",
+              "error-container": "#93000a",
+              "surface-dim": "#101321",
+              "primary": "#d0bcff",
+              "on-tertiary": "#002584",
+              "on-secondary-fixed-variant": "#005048",
+              "on-surface": "#e0e1f6",
+              "secondary-fixed-dim": "#4fdbc8",
+              "background": "#101321",
+              "surface-variant": "#313443",
+              "on-background": "#e0e1f6",
+              "tertiary-fixed": "#dde1ff",
+              "on-secondary-fixed": "#00201c",
+              "surface-container-high": "#262938",
+              "primary-container": "#a078ff",
+              "surface-bright": "#363848",
+              "on-secondary-container": "#003f38",
+              "tertiary-container": "#6b89ff",
+              "tertiary": "#b7c4ff",
+              "outline-variant": "#494454",
+              "error": "#ffb4ab",
+              "primary-fixed": "#e9ddff",
+              "on-primary-container": "#340080",
+              "inverse-on-surface": "#2d303f",
+              "surface-container-highest": "#313443",
+              "secondary": "#4fdbc8",
+              "secondary-fixed": "#71f8e4",
+              "on-primary": "#3c0091",
+              "on-error": "#690005",
+              "on-error-container": "#ffdad6",
+              "on-primary-fixed": "#23005c",
+              "surface": "#101321",
+              "secondary-container": "#04b4a2",
+              "primary-fixed-dim": "#d0bcff",
+              "on-tertiary-container": "#002074",
+              "tertiary-fixed-dim": "#b7c4ff",
+              "on-surface-variant": "#cbc3d7"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(12px);
+        background: rgba(49, 52, 67, 0.6);
+      }
+      .text-glow-error {
+        text-shadow: 0 0 15px rgba(255, 180, 171, 0.3);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen selection:bg-primary/30">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 right-0 h-16 flex items-center justify-between px-6 bg-surface/80 backdrop-blur-md z-40">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="graphic_eq">graphic_eq</span>
+<h1 class="font-headline font-bold text-lg tracking-tight">Voxa</h1>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-high">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_circle">account_circle</span>
+</button>
+</header>
+<!-- Main Content (Settings Dashboard Layout) -->
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto">
+<section class="space-y-8">
+<div class="space-y-2">
+<h2 class="font-headline text-3xl font-extrabold tracking-tight">Settings</h2>
+<p class="text-on-surface-variant">Manage your voice profile and application data.</p>
+</div>
+<!-- Bento Grid Settings Mockup -->
+<div class="grid grid-cols-1 gap-4">
+<div class="p-8 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<div class="flex justify-between items-center">
+<div>
+<h3 class="font-headline text-xl font-semibold">Voice Profile</h3>
+<p class="text-on-surface-variant text-sm mt-1">Adjust your target resonance ranges</p>
+</div>
+<span class="material-symbols-outlined text-secondary" data-icon="tune">tune</span>
+</div>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<div class="flex justify-between items-center">
+<div>
+<h3 class="font-headline text-xl font-semibold">Cloud Sync</h3>
+<p class="text-on-surface-variant text-sm mt-1">Keep your history across devices</p>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="cloud_done">cloud_done</span>
+</div>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<div class="flex justify-between items-center">
+<div>
+<h3 class="font-headline text-xl font-semibold text-error/80">Danger Zone</h3>
+<p class="text-on-surface-variant text-sm mt-1">Permanently delete your account and data</p>
+</div>
+<span class="material-symbols-outlined text-error/60" data-icon="warning">warning</span>
+</div>
+<button class="mt-6 px-6 py-3 rounded-full bg-error-container/20 border border-error/20 text-error font-semibold text-sm">
+                        Reset Data
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Modal Overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-6 bg-surface-container-lowest/80 backdrop-blur-sm">
+<!-- Confirmation Dialog Card -->
+<div class="w-full max-w-md bg-surface-container-high rounded-xl overflow-hidden shadow-2xl border border-outline-variant/15 relative">
+<!-- Atmospheric Gradient Glow -->
+<div class="absolute -top-24 -left-24 w-48 h-48 bg-error/10 rounded-full blur-[80px]"></div>
+<div class="p-8 relative z-10">
+<div class="flex flex-col items-center text-center space-y-6">
+<!-- Destructive Icon Container -->
+<div class="w-16 h-16 rounded-full bg-error-container/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-3xl" data-icon="delete_forever">delete_forever</span>
+</div>
+<!-- Content -->
+<div class="space-y-3">
+<h2 class="font-headline text-2xl font-bold text-on-surface">Reset all data?</h2>
+<p class="text-on-surface-variant leading-relaxed">
+                            This will permanently remove your target ranges, session history, and recordings. This action cannot be undone.
+                        </p>
+</div>
+<!-- Actions -->
+<div class="w-full flex flex-col gap-3 pt-4">
+<button class="w-full h-14 rounded-full bg-gradient-to-r from-error/80 to-error text-on-error font-bold text-base shadow-lg shadow-error/10 active:scale-[0.98] transition-transform">
+                            Reset Everything
+                        </button>
+<button class="w-full h-14 rounded-full bg-surface-container-highest/50 text-on-surface font-semibold text-base border border-outline-variant/20 hover:bg-surface-container-highest transition-colors">
+                            Cancel
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] max-w-lg glass-effect h-20 rounded-full border border-outline-variant/10 px-8 flex items-center justify-between z-40">
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined text-on-surface" data-icon="home">home</span>
+<span class="text-[10px] font-label font-medium uppercase tracking-wider">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined text-on-surface" data-icon="mic">mic</span>
+<span class="text-[10px] font-label font-medium uppercase tracking-wider">Practice</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-40">
+<span class="material-symbols-outlined text-on-surface" data-icon="history">history</span>
+<span class="text-[10px] font-label font-medium uppercase tracking-wider">History</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-secondary relative">
+<div class="absolute -bottom-2 w-8 h-1 bg-secondary/30 blur-sm rounded-full"></div>
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-[10px] font-label font-medium uppercase tracking-wider">Settings</span>
+</div>
+</nav>
+<!-- Decorative Background Elements -->
+<div class="fixed inset-0 pointer-events-none -z-10">
+<div class="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[120px]"></div>
+</div>
+</body></html>
